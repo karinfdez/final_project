@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+
+  
+  <div class="galleria">
+	  <% @image_gallery.picture.each do |pic| %>
+	  	<img src="<%= pic.url %>">
+	  <% end %>
+  </div>
+
+<script>Galleria.loadTheme('../galleria/themes/classic/galleria.classic.min.js');
+ Galleria.run('.galleria');
+</script>
+
+<%= link_to 'Back', image_galleries_path %>

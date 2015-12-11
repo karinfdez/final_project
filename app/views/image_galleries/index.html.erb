@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<%if current_user.present? && current_user.admin?%>
+  <%= link_to 'Add new Image gallery', new_image_gallery_path %>
+ <% end %>
+
+<h1>Listing Image Galleries</h1>
+
+
+    <% @image_galleries.each do |image_gallery| %>
+        
+        <a href="/image_galleries/<%=image_gallery.id%>"><p><%=image_gallery.title%> :<%=image_gallery.date%></p>
+        <img src="<%= image_gallery.picture[0]%>"></a>
+     
+      <%if current_user.present? && current_user.admin?%>
+       <%= link_to 'Edit', edit_image_gallery_path(image_gallery) %>
+        <%= link_to 'Destroy', image_gallery, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+    <% end %>
+
+    <br>
+ 
+ 

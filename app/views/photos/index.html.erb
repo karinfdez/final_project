@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+
+<%#= @name %>
+<h1>Listing Photos</h1>
+
+
+    <% @photos.each do |photo| %>
+      <img src='<%= photo.image.url(:small)%>'>
+      <spam><%= link_to 'Show', photo %></spam>
+      <spam><%= link_to 'Edit', edit_photo_path(photo) %></spam>
+      <spam><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></spam><br>
+      <%= photo.title %><br>
+
+        <!-- <spam><%#= link_to 'Show', photo %></spam> -->
+        <!-- <spam><%#= link_to 'Edit', edit_photo_path(photo) %></spam> -->
+        <!-- <spam><%#= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></spam><br> -->
+    <% end %>
+<br>
+
+<%= link_to 'New Photo', new_photo_path %>
