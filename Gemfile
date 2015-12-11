@@ -42,6 +42,8 @@ gem 'redis-rails' # Will install several other redis-* gems
 gem 'resque'
 # Resque Scheduler
 gem 'resque-scheduler'
+#To Heroku
+gem 'rails_12factor', group: :production
 
 #To schedule tasks.This gem schedules the tasks by creating cron jobs on server
 
