@@ -2,8 +2,22 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-/*General*/
 
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+
+#container {
+   min-height:100%;
+   position:relative;
+}
+#body{
+	/*height of footer*/
+	 padding-bottom:55px; 
+}
 .text-home,
 .copyrigth{
 	font-family: 'Enriqueta', serif;
@@ -76,7 +90,7 @@
 /*Section 2 home*/
 .module.content{
 	background-color: white;
-	padding: 35px;
+	padding: 30px;
 }
 
 	.navbar-center{
@@ -137,7 +151,11 @@
 footer{
 	background: -webkit-linear-gradient(left,rgba(63,196,169,0.7)30%, rgba(132,225,255,0.7)),
     center center no-repeat;
-	padding: 15px;
+	height: 55px;
+	position:absolute;
+   	bottom:0;
+   	width:100%;
+   
 }
 .logo_footer{
 	margin-right: 5px;
