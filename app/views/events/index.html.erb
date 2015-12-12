@@ -1,13 +1,15 @@
 <!-- <p id="notice"><%#= notice %></p> -->
 <main>
 <section class="events-page">
- <div class="events_background">
+ <div class=" input-append events_background">
 <%= form_tag '/events', :method => 'get',class: "navbar-form search-event" do %>
+</div>
   <div class="input-append">
     <%= text_field_tag :search_event, params[:search_event ], class: "span2", placeholder: "Search by Title" %>
     <%= text_field_tag :search_location, params[:search_location], class: "span2", placeholder: "Search by Location" %>
+    </div>
     <%#= text_field_tag :search_date, params[:search_date], class: "span2", placeholder: "Search by Date" %>
-  <select name="drop_date">
+  <select class="input-append" name="drop_date">
     <option value="All dates" selected="selected">Search by date</option>
     <%if current_user.present? && current_user.admin?%>
       <option value="Past events">Past Events</option>
@@ -17,10 +19,8 @@
     <option value="This week">This week</option>
     <option value="This month">This month</option>
 </select>
-
-
     <button class="btn" type="submit"><i class="icon-search">Search</i></button>
-  </div>
+
 <% end %>
 
 <h4>Listing Events</h4>
@@ -71,6 +71,4 @@
   </div>
 </section>
 </main>
-  <%#= link_to 'Modify users', users_path %>
- <%# end %>
- 
+  
