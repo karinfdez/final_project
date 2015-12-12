@@ -186,7 +186,7 @@ footer{
 .about_background{
   width: 100%;
   height: 100vh;
-  background: asset-url("6.jpg") center center no-repeat;
+  background: asset-url("5.jpg") center center no-repeat;
   background-attachment: fixed;
   /*Place the background image behind the blue logo*/
   z-index: -2;
@@ -209,4 +209,18 @@ footer{
 	margin-top: 40px;
 	font-size: 15px;
 	padding: 0 125px;
+}
+
+/*Events page*/
+.events_background{
+  width: 100%;
+  height: 50vh;
+  background: asset-url("12.jpg") center center no-repeat;
+  /*background-attachment: fixed;*/
+  /*Place the background image behind the blue logo*/
+  z-index: -2;
+  position: relative;
+}
+.search-event{
+	padding-top: 100px;
 }
