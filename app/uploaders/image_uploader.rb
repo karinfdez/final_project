@@ -22,9 +22,11 @@ class ImageUploader < CarrierWave::Uploader::Base
   version :small do
     process :resize_to_limit => [80, 80]
   end
+  # Index page for users
   version :user_image do
-     process :resize_to_limit => [60, 50]
+     process :resize_to_limit => [134, 134]
   end
+  # On index page of events
   version :event_image do
     process :resize_to_limit => [300, 171]
   end

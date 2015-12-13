@@ -15,6 +15,7 @@
 	</head>
 	<div id="container">
 		<body>
+		 <div class="wrapper">
 			<div id="body">
 				<div class="container-fluid" id="home-section">
 					<!-- First row for the nav links -->
@@ -45,7 +46,7 @@
 						</div>
 						<!-- Empty space that separates the nav buttons -->
 						<!-- <div class="col-md-5">
-											
+												
 						</div> -->
 						<div class=class="col-md-5 home-nav">
 							<ul class="nav navbar-nav navbar-right top-menu">
@@ -64,20 +65,18 @@
 					<!-- <div class="notice"><%#= flash[:notice] %></div>
 					<div class="alert"><%#= flash[:alert] %></div> -->
 					<!-- <div> -->
-						<%= yield %>
+					<%= yield %>
 					<!-- </div> -->
 				</div>
 			</div>
-			<footer>
+			<footer class="footer-artist">
 				<div class="container">
 					<div class="asides clearfix">
 						<aside class="logo">
 						</aside>
 					</div>
 					<div class="copyright">
-						<small>
-						2015 Cajon Project
-						</small>
+						<small>2015 Cajon Project</small>
 						<div class="footer-icons">
 							<a href='http://www.facebook.com'><%= image_tag 'Icono_Face.png', alt: 'Facebook logo', :class => "logo_footer"%></a>
 							<a href='http://www.instagram.com'><%= image_tag 'Icono_Insta.png', alt: 'Instagram logo', :class => "logo_footer"%></a>
@@ -87,5 +86,4 @@
 				</div>
 			</footer>
 		</body>
-	</div>
 </html>

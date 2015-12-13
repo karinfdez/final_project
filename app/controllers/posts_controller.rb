@@ -113,12 +113,12 @@ class PostsController < ApplicationController
   # DELETE /posts/1.json
   def destroy
     #Only administrator remove the posts. Artist only edit them.
-    # if @user.nil?
+    if @user.nil?
       @post=Post.find_by(id: params[:id])
     # end
-    # else
-     # @post = @user.posts.find(params[:id])
-    # end
+    else
+     @post = @user.posts.find(params[:id])
+    end
 
     if @post.destroy
     respond_to do |format|
