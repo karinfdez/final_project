@@ -19,14 +19,20 @@
     <!-- Div for black bar -->
     <!-- <h1>Collaborators</h1> -->
     <div class="list_users">
-      
+      <div class="add_back">
+      <% if current_user.present? && current_user.admin? %>
+      <spam class="new_user"><%= link_to 'New User |',  new_user_path %></spam>
+      <% end %>
+      <spam class="new_user"><%= link_to 'Back', users_path%></spam>
+      </div>
+      <br>
       <%if @users.count>0%>
       <!-- <div class="row"> -->
       <% @users.each do |user| %>
       
       <div class="paragraphs">
-        
-        <div class="col-md-4">
+         
+        <div class="col-md-4 users">
           <div class="span4">
             <a  href=' /users/<%=user.id %>'>
               <img style="float:left" src='<%=user.image_url(:user_image)%>'/>
@@ -47,10 +53,5 @@
       <% else %>
       <p>There are no artists to show at this moment</p>
       <% end %>
-      <% if current_user.present? && current_user.admin? %>
-      <%= link_to 'New User',  new_user_path %> |
-      <% end %>
-      <%= link_to 'Back', users_path%>
-      <br>
     </div>
   </section>
