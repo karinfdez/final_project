@@ -1,12 +1,15 @@
 <!-- <p id="notice"><%#= notice %></p> -->
-<main>
+
+<!-- <main class="main"> -->
+
 <section class="events-page">
+
  <div class=" input-append events_background">
 <%= form_tag '/events', :method => 'get',class: "navbar-form search-event" do %>
 </div>
   <div class="input-form">
     <%= text_field_tag :search_event, params[:search_event ], class: "span2", placeholder: "Search by Title" %>
-    <%= text_field_tag :search_location, params[:search_location], class: "span2", placeholder: "Search by Location" %>
+    <%= text_field_tag :search_location, params[:search_location], class: "location", placeholder: "Search by Location" %>
     <%#= text_field_tag :search_date, params[:search_date], class: "span2", placeholder: "Search by Date" %>
   <select class="input-append drop_down" name="drop_date"style="color:#ADADAD">
     <option value="All dates" selected="selected">Search by date</option>
@@ -22,53 +25,41 @@
 
 <% end %>
  </div>
-
-<h4>Listing Events</h4>
+ <div class="bar"></div>
+<div class="event-list">
+<!-- <h4>Listing Events</h4> -->
  <% if @events.present?%>
-  <table>
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Location</th>
-        <th>Start date</th>
-        <!-- <th>Ends date</th> -->
-        <th>Image</th>
-        <!-- <th>Description</th> -->
-        <!-- <th>Organizer name</th> -->
-        <!-- <th>Event type</th> -->
-        <th colspan="3"></th>
-      </tr>
-    </thead>
+ 
+        <div class="list-event">
 
-    <tbody>
-        <% @events.each do |event| %>
-          <tr>
-            <td><a href="/events/<%=event.id%>"><%= event.title%></a></td>
-            <td><%= event.location %></td>
-            <td><%=event.start_date %></td>
-            <!-- <td><%#= event.ends_date %></td> -->
-            <!-- Show image resized -->
-            <td><img src='<%= event.image_url(:thumb) %>'></td>
+         <% @events.each do |event| %>
+          <div class="col-md-4 event">
+            <a href="/events/<%=event.id%>"><p class="event-top" style="color:rgb(77,77,77)"><%=event.event_type%></p>
+            <img src='<%= event.image_url(:event_image)%>'>
+          <spam style="color:rgb(77,77,77)"><%=event.start_date %></spam><br>
+          <spam class="event-title" style="color:rgb(77,77,77)"><%= event.title%></spam><br>
+          <spam style="color:rgb(77,77,77)"><%= event.location %></spam></a><br>
+            
           <% if current_user.present? and current_user.admin? %>
-             <td> <%= link_to 'Edit', edit_event_path(event) %></td>
-            <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <div class="link-admin">
+           <spam style="color:rgb(77,77,77)"><%= link_to 'Edit', edit_event_path(event) %></spam>
+            <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %><br>
+          </div>
           <% end %>
-      <% end %>
-        </tr>
-    </tbody>
-  </table>  
+          </div>
+      <% end %>  
+<br>
     <% else%>
-      <p>Sorry, there are no events.</p>
+      <p class="no-event">Sorry, there are no events.</p><br>
         <!-- Only admin can modify, destroy and create events. -->
     <% end %>
-
-        
-<br>
-
- <% if current_user.present? and current_user.admin? %>
-   <%= link_to 'New Event', new_event_path %>
+    <br>
+    <% if current_user.present? and current_user.admin? %>
+   <p class="create_event"><%= link_to 'Add Event', new_event_path %></p>
   <% end %>
   </div>
+
+
 </section>
 </main>
   
