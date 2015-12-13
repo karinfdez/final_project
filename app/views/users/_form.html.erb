@@ -1,3 +1,4 @@
+<section class="user_form">
 <% if @user.errors.any? %>
   <ul>
     <% @user.errors.full_messages.each do |err| %>
@@ -5,7 +6,7 @@
     <% end %>
   </ul>
 <% end %>
-
+<div class="form">
 <%= form_for @user do |f| %>
 
   <div class="field">
@@ -48,4 +49,6 @@
   <button type='submit'>Submit</button>
    
 <% end %>
+</div>
+</section>
 

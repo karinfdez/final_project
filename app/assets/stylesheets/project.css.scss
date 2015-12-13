@@ -34,7 +34,10 @@ margin: 0 auto -4em;
  #search_user,
  .image_title,
  .edition,
- .image a{
+ .image a,
+ .actions,
+.field,
+.alert{
 	font-family: 'Enriqueta', serif;
 }
 .border-logo{
@@ -504,8 +507,7 @@ a.image_event:hover{
   height: 367px;
   /*height: 70vh;*/
  background: -webkit-linear-gradient(rgba(0,22,45,0.5) 20%, rgba(255,255,255,0.2) 50%), asset-url("3.jpg") center center no-repeat;
-  
-  // z-index: -2;
+ 
 }
 
 .post_input{
@@ -529,6 +531,48 @@ a.image_event:hover{
 .the_post{
 	padding-bottom: 30px;
 	margin-left:50px;
+}
+
+// Log in page
+
+.background{
+  width: 100%;
+  height: 100vh;
+  /*height: 70vh;*/
+ background: -webkit-linear-gradient(rgba(0,22,45,0.5) 100%, rgba(255,255,255,0.2) 30%), asset-url("10.jpg") center center no-repeat;
+ z-index:-2;
+}
+.sign_form
+{
+	
+	margin-top: -500px;
+	padding-bottom:200px;
+
+    // border: 3px solid black;
+    // padding-left: 400px;
+    // padding-right: 400px;
+}
+
+.actions,
+.field,
+{
+	    margin-left: 80px;
+	    color:white;
+}
+.alert{
+	margin-left:520px;
+	color:white;
+	 text-transform: uppercase;
+}
+.password{
+	margin-left: 540px;
+}
+
+.actions input{
+	color:gray;
+}
+.password a{
+	color: rgba(86,166,169,1);
 }
 
 footer{
