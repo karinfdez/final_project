@@ -21,7 +21,7 @@
     <option value="This week">This week</option>
     <option value="This month">This month</option>
 </select>
-    <button class="btn" type="submit"><i class="icon-search">SEARCH</i></button>
+    <button class="btn" type="submit">SEARCH</button>
 
 <% end %>
  </div>
@@ -31,7 +31,11 @@
  <% if @events.present?%>
  
         <div class="list-event">
-
+  <% if current_user.present? and current_user.admin? %>
+   <%= link_to 'Add Event', new_event_path %>
+  <% end %>
+<!-- <spam><%#= link_to 'Back',events_path %></spam> -->
+<br>
          <% @events.each do |event| %>
           <div class="col-md-4 event">
             <a href="/events/<%=event.id%>"><p class="event-top" style="color:rgb(77,77,77)"><%=event.event_type%></p>
@@ -47,19 +51,16 @@
           </div>
           <% end %>
           </div>
-      <% end %>  
+      <% end %>
+ 
 <br>
     <% else%>
       <p class="no-event">Sorry, there are no events.</p><br>
         <!-- Only admin can modify, destroy and create events. -->
     <% end %>
     <br>
-    <% if current_user.present? and current_user.admin? %>
-   <p class="create_event"><%= link_to 'Add Event', new_event_path %></p>
-  <% end %>
   </div>
-
-
+  
 </section>
 </main>
   

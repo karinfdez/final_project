@@ -168,24 +168,12 @@ margin: 0 auto -4em;
  }
 
 
-/*#slide-2 .hsContent {
-    margin-left: -450px;
-    top: auto;
-}
-#slide-2 h2 {
-    position: fixed;
-    top: 70%;
-}*/
-
-/*.sep-elements{
-	border-right: 10px;
-}*/
-/*To show images using javascript plugin*/
 .galleria{ 
  	width: 100%;
- 	height: 450px;
+ 	height: 500px;
  	/*default black background:*/
  	background: #000;
+ 	margin-bottom: 80px;
  }
 
 
@@ -318,6 +306,16 @@ margin: 0 auto -4em;
 {
 	text-align:center;
 }
+.list-event a{
+	font-size: 16px;
+	text-transform: uppercase;
+	color:#999999;
+	margin-bottom: 20px;
+}
+.list-event a:hover{
+	text-decoration: none;
+	color:black;
+}
 .event{
 	border: 2px solid rgb(153,153,153);
     width: 324px;
@@ -325,6 +323,7 @@ margin: 0 auto -4em;
     margin-left: 84px;
     margin-bottom: 40px;
     padding-top: 20px;
+    margin-top: 45px;
     
 }
 .link-admin a{
@@ -346,23 +345,17 @@ margin: 0 auto -4em;
 /*User page*/
 
 .user-search{
-	/*margin-top: 250px;*/
+	margin-top: -170px;
 }
 
-.search-bar{
-  /*width: 100%;
-  height: 367px; /*height: 70vh;*/
-  /*background-image: -webkit-linear-gradient(rgba(0,22,45,0.5) 10%, rgba(255,255,255,0.2) 50%), asset-url("3.jpg") center center no-repeat;*/
-  /*position:absolute;*/
-  /*z-index:-30;*/
+.user_background{
+  
   width: 100%;
   height: 367px;
   /*height: 70vh;*/
-  background: -webkit-linear-gradient(rgba(0,22,45,0.5) 20%, rgba(255,255,255,0.2) 50%), asset-url("3.jpg") center center no-repeat;
+  background: asset-url("8.jpg") center center no-repeat;
   margin: 0;
-  position:relative;
-  /*z-index: -2;*/
-
+  z-index: -2;
 }
 .input-append.use-search{
 	/*z-index: 2px;*/
@@ -371,7 +364,7 @@ margin: 0 auto -4em;
     background-color: #333333;
 }
 #search_user{
-	font-size: 16px;
+	font-size: 15px;
     /*width: 245px; */
     margin-right:32px;
     height: 31px;
@@ -383,7 +376,7 @@ margin: 0 auto -4em;
 
 .bar
 {
-	width: 885px;
+	width: 870px;
     height: 50px;
     background-color: black;
     z-index: -1;
@@ -410,7 +403,7 @@ margin: 0 auto -4em;
 
 /*Image page*/
 .image{
-	padding-top: 300px;
+	padding-top: 250px;
 }
 .each_image{
 	padding-bottom: 55px;
@@ -423,7 +416,7 @@ margin: 0 auto -4em;
 }
 .each_image img{
 
-	width:400px;
+	width:500px;
 	height:300px;
 	/*text-align: center;*/
 	border-radius:12px;
@@ -470,12 +463,10 @@ a.image_event:hover{
 .gallery_background{
   
   width: 100%;
-  height: 70vh;
-  /*height: 70vh;*/
+  height: 367px;
   background:asset-url("1.jpg") center center no-repeat;
   margin-bottom: 1400px;
-  /*position:absolute;*/
-  /*z-index: -20;*/
+  
 }
 
 footer{
