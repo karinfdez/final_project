@@ -9,14 +9,16 @@
   </div>
 <% end %>
 <div class="bar"></div>
-</section>
+<!-- <section class="post_list"> -->
 <%counter=1%>
+<div class="top_list">
 <%if @posts_title.present?%>
 	<% @posts_title.each do |post| %>
+	<div class="col-md-3 the_post style="text-align:center">
 	  <div class="post">
-	    <h4 class="post-title"><%=counter%>.<%= link_to post.title, post %></h4>
+	    <h4 class="post-title"><%=counter%>.Post title: <%= link_to post.title, post %></h4>
 		<%if post.user%> 
-	    <h6 class="post-author">Author:<%=  post.user.first_name%></h6>
+	    <spam><h6 class="post-author">Author:<%=  post.user.first_name%></h6></spam>
 	  <% else %>
 	  	<h6>Guest</h6>
 	  <% end %>
@@ -25,10 +27,12 @@
 		<% end%>
 	    <%counter+=1%>
 	  </div>
+	  </div>
 	<% end %>
 <% else%>
 	<p>No post available.</p>
 <% end %>
+</div>
 </section>
 
 

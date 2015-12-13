@@ -264,7 +264,7 @@ border-bottom: 2px solid black;
   background: -webkit-linear-gradient(left,rgba(63,196,169,1)30%, rgba(132,225,255,1));
   border-radius: 0px;
   height:27px;
-  width:72px;
+  width:75px;
   /*background: */
 }
 /*Search button*/
@@ -277,8 +277,8 @@ border-bottom: 2px solid black;
 .drop_down
 {
 	font-size: 16px;
-	width:245px;
-	margin-right:10px;
+	width:240px;
+	margin-right:6px;
 	height:31px;
 	border-radius:0px;
 	border:0px;
@@ -315,13 +315,15 @@ border-bottom: 2px solid black;
 {
 	text-align:center;
 }
-
-.list-event a,
+.new_user{
+margin-left: 460px;
+}
 .new_user a{
 	font-size: 16px;
 	text-transform: uppercase;
 	color:#999999;
 	margin-bottom: 20px;
+
 }
 .list-event a:hover,
 .new_user a:hover{
@@ -357,7 +359,7 @@ border-bottom: 2px solid black;
 /*User page*/
 
 .users{
-	padding-top: 60px;
+	padding-top: 20px;
 	text-align: left;
 }
 .user-search{
@@ -422,7 +424,7 @@ border-bottom: 2px solid black;
 
 /*Image page*/
 .image{
-	padding-top: 250px;
+	// padding-top: 250px;
 }
 .each_image{
 	padding-bottom: 55px;
@@ -432,6 +434,7 @@ border-bottom: 2px solid black;
 .list_images{
 	
 	text-align:center;
+	margin-top: 280px;
 
 	/*margin-left: 380px;*/
 }
@@ -488,7 +491,7 @@ a.image_event:hover{
   width: 100%;
   height: 367px;
   background:asset-url("1.jpg") center center no-repeat;
-  margin-bottom: 1400px;
+  margin-bottom: 1350px;
   
 }
 // Page Posts
@@ -519,6 +522,13 @@ a.image_event:hover{
 #search{
 	margin-right:20px;
 	margin-left: 20px;
+}
+.top_list{
+	padding-top: 200px;
+}
+.the_post{
+	padding-bottom: 30px;
+	margin-left:50px;
 }
 
 footer{
