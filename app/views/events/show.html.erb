@@ -1,5 +1,6 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p> -->
 
+<section class="post_details" >
 <p>
   <strong>Title:</strong>
   <%= @event.title %>
@@ -22,7 +23,7 @@
 
 <p>
   <strong>Image:</strong>
-  <img src='<%= @event.image_url() %>'>
+  <img src='<%= @event.image_url(:small) %>'>
 </p>
 
 <p>
@@ -44,3 +45,4 @@
     <%= link_to 'Edit', edit_event_path(@event) %>
   <% end %>
 <%= link_to 'Back', events_path %>
+</section>

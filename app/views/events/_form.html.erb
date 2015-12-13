@@ -1,5 +1,6 @@
 
-<div id="event">
+<div class="background_color">
+<div class="new_event">
 <%= form_for(@event) do |f| %>
   <% if @event.errors.any? %>
     <div id="error_explanation">
@@ -45,10 +46,11 @@
     <%= f.label :event_type %><br>
     <%= f.text_field :event_type %>
   </div>
-  <div class="actions">
+  <div class="actions event_buttom">
     <%= f.submit %>
   </div>
 <% end %>
+</div>
 </div>
 
 

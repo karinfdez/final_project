@@ -37,7 +37,8 @@ margin: 0 auto -4em;
  .image a,
  .actions,
 .field,
-.alert{
+.alert, 
+{
 	font-family: 'Enriqueta', serif;
 }
 .border-logo{
@@ -352,11 +353,12 @@ margin-left: 460px;
  	
 }
 
-.no-event{
+.no-event,
+{
 	padding-top: 75px;
 	text-align: center;
 	color:153,153,153;
-	padding-bottom: 0;
+	// padding-bottom: 0;
 }
 
 /*User page*/
@@ -374,7 +376,8 @@ margin-left: 460px;
   width: 100%;
   height: 367px;
   /*height: 70vh;*/
-  background: asset-url("8.jpg") center center no-repeat;
+  background: -webkit-linear-gradient(rgba(0,22,45,0.5) 100%, rgba(255,255,255,0.2) 30%), asset-url("8.jpg") center center no-repeat;
+  // background: asset-url("8.jpg") center center no-repeat;
   margin: 0;
   z-index: -2;
 }
@@ -500,6 +503,7 @@ a.image_event:hover{
 // Page Posts
 .list_posts{
 	margin-top:60px;
+	padding-bottom:130px;
 }
 .post_background{
   
@@ -557,7 +561,10 @@ a.image_event:hover{
 .field,
 {
 	    margin-left: 80px;
-	    color:white;
+	   
+}
+.field label{
+	color:white;
 }
 .alert{
 	margin-left:520px;
@@ -575,7 +582,57 @@ a.image_event:hover{
 	color: rgba(86,166,169,1);
 }
 
+.post_details{
+	margin-top: 300px;
+}
+
+.event_form{
+ width: 100%;
+  height: 100vh;
+  /*height: 70vh;*/
+ background: -webkit-linear-gradient(rgba(0,22,45,0.5) 100%, rgba(255,255,255,0.2) 30%), asset-url("10.jpg") center center no-repeat;
+ z-index:-2;
+}
+
+// New event page
+
+.background_color{
+	margin-top:-70px;
+	background: orange;
+	width:100%;
+	height:100hv;
+}
+
+.new_event{
+	padding-top: 100px;
+    margin-left: 200px;
+ }
+
+// }
+#event_title,
+#event_location,
+#event_description,
+#event_organizer_name,
+#event_event_type
+{
+	width: 320px;
+	border:1px solid gray;
+}
+.event_buttom{
+	margin-left: 200px;
+	padding-top: 30px;
+	padding-bottom: 100px;
+
+}
+.background_color a{
+	text-transform: uppercase;
+    color: black;
+    font-size: 18px;
+    padding-left: 100px;
+    margin-left:520px;
+}
 footer{
+	
 	background: -webkit-linear-gradient(left,rgba(63,196,169,0.7)30%, rgba(132,225,255,0.7)),
     center center no-repeat;
 	height: 55px;

@@ -14,7 +14,7 @@
 <div class="top_list">
 <%if @posts_title.present?%>
 	<% @posts_title.each do |post| %>
-	<div class="col-md-3 the_post style="text-align:center">
+	<div class="col-md-3 the_post style="text-align:center"">
 	  <div class="post">
 	    <h4 class="post-title"><%=counter%>.Post title: <%= link_to post.title, post %></h4>
 		<%if post.user%> 
@@ -30,7 +30,7 @@
 	  </div>
 	<% end %>
 <% else%>
-	<p>No post available.</p>
+	<p class="no-event">No post available.</p>
 <% end %>
 </div>
 </section>
