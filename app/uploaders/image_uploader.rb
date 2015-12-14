@@ -20,7 +20,7 @@ class ImageUploader < CarrierWave::Uploader::Base
     process :resize_to_limit => [50, 50]
   end
   version :small do
-    process :resize_to_limit => [200, 100]
+    process :resize_to_limit => [361, 241]
   end
   # Index page for users
   version :user_image do

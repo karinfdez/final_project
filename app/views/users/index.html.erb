@@ -23,7 +23,7 @@
       <% if current_user.present? && current_user.admin? %>
       <spam class="new_user"><%= link_to 'New User',  new_user_path %></spam>
       <% end %>
-      <spam class="new_user"><%= link_to 'Back', users_path%></spam>
+      <!-- <spam class="new_user"><%= link_to 'Back', users_path%></spam> -->
       </div>
       <br>
       <%if @users.count>0%>

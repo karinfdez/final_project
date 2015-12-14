@@ -1,48 +1,30 @@
-<!-- <p id="notice"><%= notice %></p> -->
+<section class="event_detail_background"></section>
+<section>
+<div class="post_show">
+  <!-- <strong>Title:</strong> -->
+ <p class="event_title"><%= @event.title %></p>
 
-<section class="post_details" >
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
+<!-- <p class="image_post">
+ <img src='<%= @event.image_url(:small) %>'>
+</p> -->
 
-<p>
-  <strong>Location:</strong>
-  <%= @event.location %>
-</p>
+<div class="event_image">
+  <div class="row">
+    <div class="span4">
+      <img style="float:left" src='<%= @event.image_url(:small) %>'/>
+      <div class="content-heading"><h5><%= @event.start_date %>/ <%= @event.ends_date %> </h5></div>
+    <div> <%= @event.location %></div><br>
+     <div><p class="max-width-desc"><%= @event.description %></p></div><br>
+     <strong>Organizer:</strong><%= @event.organizer_name %>
+    </div>
+  </div>
+</div>
+</div>
 
-<p>
-  <strong>Start date:</strong>
-  <%= @event.start_date %>
-</p>
-
-<p>
-  <strong>Ends date:</strong>
-  <%= @event.ends_date %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <img src='<%= @event.image_url(:small) %>'>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
-
-<p>
-  <strong>Organizer name:</strong>
-  <%= @event.organizer_name %>
-</p>
-
-<p>
-  <strong>Event type:</strong>
-  <%= @event.event_type %>
-</p>
 
   <% if current_user.present? and current_user.admin? %>
-    <%= link_to 'Edit', edit_event_path(@event) %>
+    <p><%= link_to 'Edit', edit_event_path(@event),class: "back inline" %></p>
   <% end %>
-<%= link_to 'Back', events_path %>
+<p><%= link_to 'Back', events_path,class: "back inline" %></p>
+
 </section>
