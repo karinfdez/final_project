@@ -33,7 +33,7 @@
 						<div class=class="col-md-2 text">
 							<ul class="nav navbar-nav navbar-left">
 								<% if user_signed_in? && !current_user.admin?%>
-								<li>Welcome <%#= current_user.first_name+ ' ' +current_user.last_name%></li>
+								<li> <%#= current_user.first_name+ ' ' +current_user.last_name%></li>
 								<li><%= link_to 'LOGOUT', destroy_user_session_path, method: 'DELETE' %></li>
 								<%elsif current_user.present? && current_user.admin?%>
 								<!-- <li>Welcome Administrator!</li> -->

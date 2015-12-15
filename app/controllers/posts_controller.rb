@@ -122,14 +122,15 @@ class PostsController < ApplicationController
 
     if @post.destroy
     respond_to do |format|
-      # if @user.nil?
-        # format.html { redirect_to posts_path, notice: 'Post was successfully destroyed.' }
-      # else
+      if @user.nil?
+        format.html { redirect_to posts_path, notice: 'Post was successfully destroyed.' }
+      else
       format.html { redirect_to 'posts', notice: 'Post was successfully destroyed.' }
       format.json { head :no_content }
     end
     end
  
+  end
   end
 
   private

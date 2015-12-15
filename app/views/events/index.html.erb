@@ -4,33 +4,32 @@
 
 <section class="events-page">
 
- <div class=" input-append events_background">
-<%= form_tag '/events', :method => 'get',class: "navbar-form search-event" do %>
-</div>
-  <div class="input-form">
-    <%= text_field_tag :search_event, params[:search_event ], class: "span2", placeholder: "Search by Title" %>
-    <%= text_field_tag :search_location, params[:search_location], class: "location", placeholder: "Search by Location" %>
-    <%#= text_field_tag :search_date, params[:search_date], class: "span2", placeholder: "Search by Date" %>
-  <select class="input-append drop_down" name="drop_date"style="color:#ADADAD">
-    <option value="All dates" selected="selected">Search by date</option>
-    <%if current_user.present? && current_user.admin?%>
-      <option value="Past events">Past Events</option>
-    <% end %>
-    <option value="Today">Today</option>
-    <option value="Tomorrow">Tomorrow</option>
-    <option value="This week">This week</option>
-    <option value="This month">This month</option>
-</select>
-    <button class="btn" type="submit">SEARCH</button>
+ <div class=" input-append events_background"></div>
 
-<% end %>
+  <div class="input-form">
+    <%= form_tag '/events', :method => 'get',class: "navbar-form search-event" do %>
+      <%= text_field_tag :search_event, params[:search_event ], class: "span2", placeholder: "Search by Title" %>
+      <%= text_field_tag :search_location, params[:search_location], class: "location", placeholder: "Search by Location" %>
+      <%#= text_field_tag :search_date, params[:search_date], class: "span2", placeholder: "Search by Date" %>
+      <select class="input-append drop_down" name="drop_date"style="color:#ADADAD">
+        <option value="All dates" selected="selected">Search by date</option>
+          <%if current_user.present? && current_user.admin?%>
+        <option value="Past events">Past Events</option>
+        <% end %>
+        <option value="Today">Today</option>
+        <option value="Tomorrow">Tomorrow</option>
+        <option value="This week">This week</option>
+        <option value="This month">This month</option>
+      </select>
+      <button class="btn" type="submit">SEARCH</button>
+    <% end %>
  </div>
  <div class="bar"></div>
 <div class="event-list">
 <!-- <h4>Listing Events</h4> -->
  <% if @events.present?%>
  
-        <div class="list-event">
+        <div class="list-event row">
   <% if current_user.present? and current_user.admin? %>
    <%= link_to 'Add Event', new_event_path %>
   <% end %>
@@ -52,7 +51,6 @@
           <% end %>
           </div>
       <% end %>
- 
 <br>
     <% else%>
       <p class="no-event">Sorry, there are no events.</p><br>
@@ -60,7 +58,9 @@
     <% end %>
     <br>
   </div>
-  
 </section>
 </main>
+
+
+
   

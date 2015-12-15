@@ -7,6 +7,7 @@
 /*HOME PAGE */
 #container {
    min-height:100%;
+   height: 100%;
    /*position:relative;*/
 
 }
@@ -14,12 +15,22 @@ html, body {
 	height: 100%;
 }
 
-
 .wrapper {
 min-height: 100%;
-height: auto !important;
+// height: auto !important;
 height: 100%;
 margin: 0 auto -4em;
+}
+
+#body {
+	min-height: 100%;
+	margin-bottom: -55px;
+}
+.padding-footer{
+	padding-bottom:55px;
+}
+.margin-footer{
+margin-bottom: 55px
 }
 
 .text-home,.text-about,
@@ -27,7 +38,8 @@ margin: 0 auto -4em;
 .event,.no-event,
  #search_user,.image_title,
  .edition,.image a,.actions,
-.field,.alert,.event_image 
+.field,.alert,.event_image,
+.posts_comments p,.comments
 {
 	font-family: 'Enriqueta', serif;
 }
@@ -46,7 +58,8 @@ margin: 0 auto -4em;
 .icon-search,
 #search_event,
 #search_location,
-.drop_down
+.drop_down,.top_list p,
+.post
 {
 	font-family: 'BenchNine', sans-serif;
 }
@@ -259,6 +272,7 @@ border-bottom: 2px solid black;
   border-radius: 0px;
   height:27px;
   width:75px;
+  margin-bottom: 6px;
   /*background: */
 }
 /*Search button*/
@@ -311,6 +325,7 @@ border-bottom: 2px solid black;
 }
 .new_user{
 margin-left: 460px;
+margin-top:-80px;
 }
 .new_user a{
 	font-size: 16px;
@@ -329,10 +344,13 @@ margin-left: 460px;
     width: 324px;
     height: 325px;
     margin-left: 84px;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
     padding-top: 20px;
     margin-top: 45px;
     
+}
+#edit_event_34{
+	padding-top: 200px;
 }
 .link-admin a{
  color:rgb(77,77,77)
@@ -360,6 +378,9 @@ margin-left: 460px;
 .user-search{
 	margin-top: -170px;
 }
+.user_name{
+	padding-top: 30px;
+}
 
 .user_background{
   
@@ -371,6 +392,13 @@ margin-left: 460px;
   margin: 0;
   z-index: -2;
 }
+.user_name,
+.text-rigth,
+{
+	text-decoration:none;
+	color:black;
+}
+
 .input-append.use-search{
 	/*z-index: 2px;*/
 	border: 3px solid black;
@@ -387,6 +415,28 @@ margin-left: 460px;
     /*margin-top: 50px;*/
 
 }
+#new_user{
+padding-top: 80px;
+}
+.text_area_user{
+   width: 300px;
+   height: 100px;
+}
+.submit-new-user{
+	margin-left: 80px;
+}
+
+.form_new_user_margin{
+	margin-bottom:50px;
+	background-color:orange;
+	height:700px;
+}
+
+
+.padding{
+	padding-bottom: 55px;
+	display:block;
+}
 
 .bar
 {
@@ -395,7 +445,7 @@ margin-left: 460px;
     background-color: black;
     z-index: -1;
     margin-left: 245px;
-    margin-top: -47px;
+    margin-top: -55px;
 }
 
 
@@ -412,6 +462,7 @@ margin-left: 460px;
 .list_users{
 	margin-top: 140px;
 	margin-left: 135px;
+	margin-bottom: 70px;
 }
 
 .newuser a{
@@ -419,20 +470,24 @@ margin-left: 460px;
 }
 
 /*Image page*/
-.image{
-	// padding-top: 250px;
-}
+// .image{
+// 	// padding-top: 250px;
+// }
 .each_image{
 	padding-bottom: 55px;
+
+}
+.image-gallery-image{
+	width:500px;
+	height:300px;
 
 }
 
 .list_images{
 	
 	text-align:center;
-	margin-top: 280px;
+	margin-bottom: 45px;
 
-	/*margin-left: 380px;*/
 }
 .each_image img{
 
@@ -450,7 +505,6 @@ margin-left: 460px;
 	font-size:16px;
 	text-transform: uppercase;
 	color:black;
-	text-align: left;
 }
 a.image_event:hover{
 	text-decoration: none;
@@ -461,6 +515,9 @@ a.image_event:hover{
 
 	/*margin:0 auto;*/
 	/*margin-left:325px;*/
+}
+.edition{
+	margin-bottom:40px;
 }
 .edition a{
 	color: black;
@@ -475,6 +532,13 @@ a.image_event:hover{
     color: black;
     font-size: 16px;
 }
+.image{
+	padding-top: 40px;
+	padding-bottom:25px;
+}
+.spam44 img{
+	// padding-bottom:55px;
+}
 .edition a:hover,
 .image a:hover,
 {
@@ -487,27 +551,36 @@ a.image_event:hover{
   width: 100%;
   height: 367px;
   background:asset-url("1.jpg") center center no-repeat;
-  margin-bottom: 1350px;
   
 }
 // Page Posts
 .list_posts{
 	margin-top:60px;
-	padding-bottom:130px;
+	// padding-bottom:130px;
+}
+.post-title{
+	margin-left: 170px;
+	
 }
 .post_background{
   
   width: 100%;
   height: 367px;
   /*height: 70vh;*/
- background: -webkit-linear-gradient(rgba(0,22,45,0.5) 20%, rgba(255,255,255,0.2) 50%), asset-url("3.jpg") center center no-repeat;
+ background: -webkit-linear-gradient(rgba(0,22,45,0.5) 40%, rgba(255,255,255,0.2) 50%), asset-url("3.jpg") center center no-repeat;
  
 }
 
+.post{
+	font-size:20px;
+}
 .post_input{
 	margin-left: 245px;
+	margin-bottom: 12px;
 }
-
+.title_cap{
+	text-transform: uppercase;
+}
 .searcher{
 	margin-top:-220px;
 }
@@ -576,6 +649,45 @@ a.image_event:hover{
 	margin-top: 300px;
 }
 
+#post_content{
+	width: 400px;
+    height: 200px;
+}
+.padding_posts{
+	padding-bottom:40px;
+}
+.posts_comments
+{
+	margin-top: 100px;
+	display: block;
+    text-align: left;
+    margin-left: 400px;
+    margin-bottom: 200px;
+}
+.commenter_capital{
+	text-transform: uppercase;
+}
+.background_show_comments{
+	width: 100%;
+    height: 367px;
+  /*height: 70vh;*/
+   background: -webkit-linear-gradient(rgba(0,22,45,0.5) 10%, rgba(255,255,255,0.2) 30%), asset-url("12.jpg") center center no-repeat;
+   border-bottom:1px solid;
+   // z-index:-2;
+}
+.content_padding{
+	border-bottom: 1px solid gray;
+    margin-bottom: 80px;
+    padding-bottom:60px;
+    padding-right: 80px;
+}
+.message_padding{
+	padding-bottom: 40px;
+}
+
+.padding_text{
+	padding-right: 80px;
+}
 .event_form{
  width: 100%;
   height: 100vh;
@@ -620,11 +732,11 @@ a.image_event:hover{
 .back {
 	text-transform: uppercase;
     color: black;
-    display:block;
-    width:auto;
+    // display:block;
+    // width:auto;
     font-size: 18px;
-    position: relative;
-    margin:0 auto;
+    // position: relative;
+    // margin:0 auto;
 }
 
 // Page event details
@@ -682,6 +794,31 @@ p .inline{
 .span4 img{
 	margin-left: 150px;
 }
+
+.background_new_post{
+	height: 585px;
+}
+
+.field_post,
+.post_action
+{
+	margin-left:500px;
+
+}
+.post_title{
+	padding-top: 200px;
+}
+
+// Add user page
+.background_color_event{
+   // display: block;
+   //  width: 450px;
+   //  margin: 0 auto;
+   //  padding-top: 100px;
+   background-color: orange;
+   height: 600px;
+}
+
 footer{
 	
 	background: -webkit-linear-gradient(left,rgba(63,196,169,0.7)30%, rgba(132,225,255,0.7)),
@@ -689,7 +826,6 @@ footer{
 	height: 55px;
 	position:absolute;
    	width:100%;	
+   	// margin-top: 80px;
 }
-/*.footer-artist{
-	margin-top: 700px;
-}*/
+

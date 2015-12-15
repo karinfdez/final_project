@@ -10,25 +10,27 @@
 <% end %>
 <div class="bar"></div>
 <!-- <section class="post_list"> -->
-<%counter=1%>
 <div class="top_list">
 <%if @posts_title.present?%>
+<h4 class="post-title">
+<div class="row padding_posts">
 	<% @posts_title.each do |post| %>
 	<div class="col-md-3 the_post style="text-align:center"">
 	  <div class="post">
-	    <h4 class="post-title"><%=counter%>.Post title: <%= link_to post.title, post %></h4>
+	    Post title: <%= link_to post.title, post,class: 'title_cap' %>
 		<%if post.user%> 
-	    <spam><h6 class="post-author">Author:<%=  post.user.first_name%></h6></spam>
-	  <% else %>
-	  	<h6>Guest</h6>
+	    <spam><p class="post-author">Author:<%=  post.user.first_name%></p></spam>
 	  <% end %>
 	  <%if current_user.present? && current_user.admin?%>
 		<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure you want to remove post?' } %>
 		<% end%>
-	    <%counter+=1%>
 	  </div>
 	  </div>
-	<% end %>
+	   <% end %>
+	   </div>
+	  </h4>
+	<%# end %>
+
 <% else%>
 	<p class="no-event">No post available.</p>
 <% end %>

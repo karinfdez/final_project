@@ -1,4 +1,4 @@
-
+<div class="background_color background_new_post">
 <%= form_for([@user,@post])do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -12,11 +12,11 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field field_post post_title">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
-  <div class="field">
+  <div class="field field_post">
     <%= f.label :image %><br>
     <%= f.file_field :image %>
   </div>
@@ -25,13 +25,13 @@
     <%= f.label :author %><br>
     <%= f.text_field :author %>
   </div> -->
-  <div class="field">
+  <div class="field field_post">
     <%= f.label :content %><br>
     <%= f.text_area :content %>
   </div>
-  <div class="actions">
+  <div class="actions post_action">
     <%= f.submit %>
   </div>
 <% end %>
-
+</div>
 <%#= link_to 'Back', user_post_path(@user) %>

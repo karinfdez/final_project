@@ -1,5 +1,5 @@
-<p id="notice"><%= notice %></p>
-
+<div class="background_show_comments"></div>
+	<div class="posts_comments">
 	<p>
 	  <!-- <strong>Title:</strong> -->
 	  <h2><%= @post.title %></h2>
@@ -19,28 +19,30 @@
 	  <%= @post.created_at%> 
 	</p>
 
-	<p>
-	  <strong>Content:</strong>
+	<p class="content_padding">
 	  <%= @post.content %>
 	</p>
 	
 	<!-- Show on same page the comment added by the public. -->
 	
 	<%if @post.comments.present?%>
+	<!-- <div class="comments"> -->
 		<h4>Comments:</h4>
 		<% @post.comments.each do |comment| %>
-		<strong>comment added:</strong><%= time_ago_in_words(comment.created_at) %><spam> ago</spam><br>
- 		<strong>Commenter:</strong><spam><%= comment.commenter %><spam><br>
-   		<strong>Text:</strong><%= comment.body %><br><br>
+		<strong>Comment added:</strong><%= ' '+ time_ago_in_words(comment.created_at) %><spam> ago</spam><br>
+ 		<strong>Name:</strong><spam class="commenter_capital"><strong><%= ' '+ comment.commenter %></strong></spam><br>
+   		<spam ><%= comment.body %></spam><br><br>
+   		<!-- </div> -->
+
   <% end%>
 	<% else%>
-		<p>There are no comments. Be the first to comment this post.</p>
+		<p class="message_padding">There are no comments. Be the first to comment this post.</p>
 	<% end %>
    
   
 <!--The form_for call here uses an array -->
 	
-	<h5>Add a comment:</h5>
+	<h5 >Add a comment:</h5>
 		<%= form_for([@post, @post.comments.build]) do |f| %>
   <p>
     <%= f.label :Name %><br>
@@ -62,4 +64,4 @@
 <% end %>
 
 <%= link_to 'Back', posts_path %>
-
+</spam>

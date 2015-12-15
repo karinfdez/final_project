@@ -18,7 +18,7 @@
     
     <!-- Div for black bar -->
     <!-- <h1>Collaborators</h1> -->
-    <div class="list_users">
+    <div class="list_users clearfix">
       <div class="add_back">
       <% if current_user.present? && current_user.admin? %>
       <spam class="new_user"><%= link_to 'New User',  new_user_path %></spam>
@@ -30,13 +30,12 @@
       <!-- <div class="row"> -->
       <% @users.each do |user| %>
       
-      <div class="paragraphs">
          
         <div class="col-md-4 users style='text-align:center'">
-          <div class="span4">
+          <div class="span44">
             <a  href=' /users/<%=user.id %>'>
-              <img style="float:left" src='<%=user.image_url(:user_image)%>'/>
-              <spam class="content-heading"><h5><%=user.first_name+' '+user.last_name %></h5></spam>
+              <img class="image_users" style="float:left" src='<%=user.image_url(:user_image)%>'/>
+              <spam class="content-heading"><h5 class="user_name"><%=user.first_name+' '+user.last_name %></h5></spam>
             <spam class="text-rigth style='clear:both'"><%= user.email%></spam></a><br>
             <!-- <spam class="text-rigth"><%= user.users_description%></spam><br> -->
             <% if current_user.present? and current_user.admin? %>
@@ -46,12 +45,11 @@
             <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure you want to remove user?' } %>
             <% end%>
             
-          </div>
         </div>
       </div>
       <% end %>
       <% else %>
-      <p>There are no artists to show at this moment</p>
+      <p class="no-event padding">There are no artists to show at this moment</p>
       <% end %>
     </div>
   </section>
