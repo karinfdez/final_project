@@ -1,14 +1,14 @@
 <div class="background_show_comments"></div>
 	<div class="posts_comments">
-	<p>
-	  <!-- <strong>Title:</strong> -->
-	  <h2><%= @post.title %></h2>
-	</p>
-
-	<p>
+	
+	
 	  <!-- <strong>Image:</strong> -->
-	  <img src='<%= @post.image_url(:thumb) %>'>
-	</p>
+	 <img class="image_post" style="float:left"src='<%= @post.image_url(:thumb) %>'>
+
+ 	<div class="rest_of_post">
+	  <!-- <strong>Title:</strong> -->
+	  <spam ><h2 class="title_post"><%= @post.title %></h2></spam>
+
 
 	<p>
 	  <strong>Author:</strong>
@@ -22,7 +22,7 @@
 	<p class="content_padding">
 	  <%= @post.content %>
 	</p>
-	
+	</div>
 	<!-- Show on same page the comment added by the public. -->
 	
 	<%if @post.comments.present?%>
@@ -36,6 +36,7 @@
 
   <% end%>
 	<% else%>
+	<br>
 		<p class="message_padding">There are no comments. Be the first to comment this post.</p>
 	<% end %>
    
