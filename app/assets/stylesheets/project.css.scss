@@ -39,7 +39,8 @@ margin-bottom: 55px
  #search_user,.image_title,
  .edition,.image a,.actions,
 .field,.alert,.event_image,
-.posts_comments p,.comments
+.posts_comments p,.comments,
+.posts_comments
 {
 	font-family: 'Enriqueta', serif;
 }
@@ -324,7 +325,8 @@ border-bottom: 2px solid black;
 	text-align:center;
 }
 .new_user{
-margin-left: 460px;
+// margin-left: 460px;
+margin-left: 490px;
 margin-top:-80px;
 }
 .new_user a{
@@ -427,9 +429,13 @@ padding-top: 80px;
 }
 
 .form_new_user_margin{
-	margin-bottom:50px;
+	 // margin-top: -30px;
+	margin-bottom: 50px;
 	background-color:orange;
 	height:700px;
+	padding-top: 100px;
+	
+	
 }
 
 
@@ -477,6 +483,11 @@ padding-top: 80px;
 	padding-bottom: 55px;
 
 }
+.user_title{
+	text-align:center;
+	margin-top: 80px;
+}
+
 .image-gallery-image{
 	width:500px;
 	height:300px;
@@ -501,6 +512,7 @@ padding-top: 80px;
 	text-align: center;
 }
 .image_title{
+	padding-top: 60px;
 	text-align: center;
 	font-size:16px;
 	text-transform: uppercase;
@@ -662,7 +674,7 @@ a.image_event:hover{
 	display: block;
     text-align: left;
     margin-left: 400px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 .commenter_capital{
 	text-transform: uppercase;
