@@ -11,16 +11,18 @@
     </div>
   <% end %>
 
-   <div class="field">
+   <div class="field gal_form">
   <%= f.label :title %>
   <%= f.text_field :title%><br>
   <%= f.label :date %>
     <%= f.date_field :date %><br>
     <%= f.label :picture %>
+    <div class="padding_uploader">
     <%= f.file_field :picture, multiple: true %><br>
   </div>
   
-  <div class="actions">
+  <div class="actions button_gallery">
     <%= f.submit %>
   </div>
 <% end %>
+</div>

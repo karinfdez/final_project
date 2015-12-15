@@ -84,6 +84,10 @@ margin-bottom: 55px
   position: relative;
     
  }
+ .users_name{
+ 	padding-top: 10px;
+    color: white;
+ }
 
  .logo_big {
   position: fixed;
@@ -336,6 +340,23 @@ margin-top:-80px;
 	margin-bottom: 20px;
 
 }
+.new_image_gallery{
+	text-align: center;
+}
+
+.padding_uploader{
+	margin-left:530px;
+}
+.button_gallery{
+	margin-right: 50px;
+}
+.gallery_title{
+	padding-top: 60px;
+}
+.gal_form{
+	margin-top:60px;
+}
+
 .list-event a:hover,
 .new_user a:hover{
 	text-decoration: none;
@@ -345,6 +366,7 @@ margin-top:-80px;
 	float: left;
 	padding-right: 40px;
 }
+
 .event{
 	border: 2px solid rgb(153,153,153);
     width: 324px;
@@ -360,6 +382,10 @@ margin-top:-80px;
 }
 .link-admin a{
  color:rgb(77,77,77)
+}
+.edit_back_events{
+	padding-bottom: 100px;
+	text-align:center;
 }
 
 .event a:hover{

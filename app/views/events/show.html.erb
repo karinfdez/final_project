@@ -23,8 +23,9 @@
 
 
   <% if current_user.present? and current_user.admin? %>
-    <p><%= link_to 'Edit', edit_event_path(@event),class: "back inline" %></p>
+  <div class="edit_back_events">
+  <%= link_to 'Edit |', edit_event_path(@event),class: "back inline" %>
   <% end %>
-<p><%= link_to 'Back', events_path,class: "back inline" %></p>
-
+<%= link_to 'Back', events_path,class: "back inline" %>
+</div>
 </section>
