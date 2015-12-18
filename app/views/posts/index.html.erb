@@ -1,4 +1,5 @@
-<div class="list-posts">
+<div class="list-posts style= margin-left: 550px
+    padding-top: 120px">
 <!-- <p id="notice"><%= notice %></p> -->
   <h1>Listing Posts</h1>
    <!-- If there are posts created, show the posts -->
@@ -22,11 +23,11 @@
             <td><img src='<%= post.image_url(:thumb) %>'></td>
             <!-- <td><%#= @user.first_name+@user.last_name %></td> -->
             <!-- <td><%#= post.content %></td> -->
-            <%if current_user.present? && current_user.admin?%>
-              <!-- <td><%#= link_to 'Show', user_post_path(@user, post)%></td> -->
-              <td><%#= link_to 'Edit', edit_user_post_path(@user, post) %></td>
-              <td><%#= link_to 'Destroy', [@user, post], { data: { confirm: 'Are you sure?' }, method: :delete} %></td>
-          <% end%>
+           <!--  <%#if current_user.present? && current_user.admin?%>
+              <!<td><%#= link_to 'Show', user_post_path(@user, post)%></td> -->
+              <!-- <td><%#= link_to 'Edit', edit_user_post_path(@user, post) %></td> -->
+              <!-- <td><%#= link_to 'Destroy', [@user, post], { data: { confirm: 'Are you sure?' }, method: :delete} %></td> -->
+          <%# end%> 
            </tr>
         <% end%>
       </tbody>

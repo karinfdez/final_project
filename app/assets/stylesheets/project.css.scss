@@ -182,7 +182,7 @@ margin-bottom: 55px
 
 .galleria{ 
  	width: 100%;
- 	height: 500px;
+ 	height: 493px;
  	/*default black background:*/
  	background: #000;
  	margin-bottom: 80px;
@@ -321,6 +321,7 @@ border-bottom: 2px solid black;
 	padding-bottom: 77px;
 
 }
+
 
 .create_event,
 .list-event,
@@ -640,7 +641,7 @@ a.image_event:hover{
 }
 
 .post{
-	font-size:20px;
+	font-size:18px;
 }
 .post_input{
 	margin-left: 245px;
@@ -721,6 +722,7 @@ a.image_event:hover{
 }
 .padding_posts{
 	padding-bottom:40px;
+	margin-left: 200px;
 }
 .posts_comments
 {
@@ -744,13 +746,13 @@ a.image_event:hover{
 .content_padding{
     margin-bottom: 80px;
     padding-bottom:60px;
-    padding-top: 100px;
+    padding-top: 50px;
     padding-right: 80px;
     border-bottom: 1px solid;
 }
 
 .title_post{
-	padding-top: 190px;
+	padding-top: 60px;
 }
 
 .padding_image{
@@ -808,10 +810,11 @@ a.image_event:hover{
 }
 .back {
 	text-transform: uppercase;
-    color: black;
-    // display:block;
-    // width:auto;
     font-size: 18px;
+    text-align: center;
+    display: block;
+    color: white;
+    padding-top: 70px;
     // position: relative;
     // margin:0 auto;
 }
@@ -873,7 +876,8 @@ p .inline{
 }
 
 .background_new_post{
-	height: 585px;
+	    padding-bottom: 100px;
+	// height: 450px;
 }
 
 .field_post,
@@ -883,18 +887,19 @@ p .inline{
 
 }
 .post_title{
-	padding-top: 200px;
+	padding-top: 250px;
+
 }
 
 // Add user page
-.background_color_event{
-   // display: block;
-   //  width: 450px;
-   //  margin: 0 auto;
-   //  padding-top: 100px;
-   background-color: orange;
-   height: 600px;
-}
+// .background_color_event{
+//    // display: block;
+//    //  width: 450px;
+//    //  margin: 0 auto;
+//    //  padding-top: 100px;
+//    background-color: orange;
+//    height: 600px;
+// }
 .user_description{
 	margin-top: 100px;
 	margin-left: 200px;
