@@ -55,7 +55,9 @@
     <% else%>
       <p class="no-event">Sorry, there are no events.</p><br>
         <!-- Only admin can modify, destroy and create events. -->
-         <%= link_to 'Add Event', new_event_path %>
+         <% if current_user.present? and current_user.admin? %>
+          <%= link_to 'Add Event', new_event_path %>
+        <% end %>
     <% end %>
     <br>
   </div>
