@@ -37,11 +37,13 @@
 			</li><br>
 		<% end %>
 	</ul>
+
    
   
 <!--The form_for call here uses an array -->
 <div class="comment_box">
 	<h5 >Add a comment:</h5>
+	<p class="error-message"></p>
    <%= form_for([@post, @post.comments.build], :html => {:class => 'js-comment_post'}) do |f| %>
   <p>
     <%= f.label :Name, class: 'label-names' %><br>
