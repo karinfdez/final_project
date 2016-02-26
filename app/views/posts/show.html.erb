@@ -31,7 +31,7 @@
 	<ul class="js-list-comments">
 		<% @post.comments.each do |c| %>
 			<li>
-				<strong>Comment added:</strong></strong><%= ' '+ time_ago_in_words(c.created_at) %><spam> ago</spam><br><br>
+				<strong>Comment added:</strong></strong><%= ' '+ time_ago_in_words(c.created_at) %><spam> ago</spam><br>
 				Name: <%= c.commenter %><br>
 				<%= c.body %><br>
 			</li><br>

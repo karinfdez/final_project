@@ -456,7 +456,12 @@ margin-top:-80px;
     padding-bottom:4em;
 
 }
-
+.js-list-comments{
+	width:30em;
+}
+.js-list-comments li{
+	list-style-type: none;
+}
 .js-submit{
 	margin-top:4em;
 	position:relative;
