@@ -40,7 +40,8 @@ margin-bottom: 55px
  .edition,.image a,.actions,
 .field,.alert,.event_image,
 .posts_comments p,.comments,
-.posts_comments,.image,.user_description
+.posts_comments,.image,.user_description,
+.edit-link
 {
 	font-family: 'Enriqueta', serif;
 }
@@ -439,7 +440,7 @@ margin-top:-80px;
 .image_post{
 	position: absolute;
     left: 60px;
-    top: 37em;
+    top: 38em;
     width: 250px;
     height: 250px;
 
@@ -456,6 +457,18 @@ margin-top:-80px;
     padding-bottom:2em;
 
 }
+.comment-text{
+	padding-top:2em;
+	padding-bottom:2em;
+	position:relative;
+	left:24em;
+
+}
+.error-message,{
+	position:relative;
+	left:20em;
+
+}
 .js-list-comments{
 	width:30em;
 }
@@ -465,13 +478,21 @@ margin-top:-80px;
 .js-submit{
 	margin-top:2em;
 	position:relative;
-	left:27em;
+	left:24em;
+	width: 10em;
 }
 .js-comment{
 	position: relative;
     width: 35em;
     left: 12em;
     height:8em;
+}
+.time-color{
+   color:rgb(63, 196, 169);
+}
+.edit-link{
+	position:relative;
+	left: 15em;
 }
 .label-names{
 	position: relative;
@@ -890,7 +911,7 @@ a.image_event:hover{
 }
 .span4 img{
 	width:361px;
-	height:241px;
+	height: 220px;
 	padding-right:80px;
 }
 
@@ -932,15 +953,6 @@ p .inline{
 
 }
 
-// Add user page
-// .background_color_event{
-//    // display: block;
-//    //  width: 450px;
-//    //  margin: 0 auto;
-//    //  padding-top: 100px;
-//    background-color: orange;
-//    height: 600px;
-// }
 .user_description{
 	margin-top: 100px;
 	margin-left: 200px;
