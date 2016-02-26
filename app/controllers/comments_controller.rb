@@ -4,12 +4,14 @@ class CommentsController < ApplicationController
 
   def index
     @comments=@post.comments.all
+    render :json => @post, :include => :comments
   end
 
   def create
     @comment = @post.comments.create(comment_params)
+    render :json => @post, :include => :comments
     #this is the page where are all the comments of a post.
-    redirect_to post_path(@post)
+    # redirect_to post_path(@post)
   end
  
   private

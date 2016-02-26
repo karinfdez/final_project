@@ -3,7 +3,7 @@
 	
 	
 	  <!-- <strong>Image:</strong> -->
-	 <img class="image_post" style="float:left"src='<%= @post.image_url(:thumb) %>'>
+	 <img class="image_post" style="float:left" src='<%= @post.image_url(:thumb) %>'>
 
  	<div class="rest_of_post">
 	  <!-- <strong>Title:</strong> -->
@@ -24,39 +24,41 @@
 	</p>
 	</div>
 	<!-- Show on same page the comment added by the public. -->
-	
-	<%if @post.comments.present?%>
-	<!-- <div class="comments"> -->
-		<h4>Comments:</h4>
-		<% @post.comments.each do |comment| %>
-		<strong>Comment added:</strong><%= ' '+ time_ago_in_words(comment.created_at) %><spam> ago</spam><br>
- 		<strong>Name:</strong><spam class="commenter_capital"><strong><%= ' '+ comment.commenter %></strong></spam><br>
-   		<spam ><%= comment.body %></spam><br><br>
-   		<!-- </div> -->
+	<!-- <ul class="js-list-comments"> -->
+		
 
-  <% end%>
-	<% else%>
-	<br>
-		<p class="message_padding">There are no comments. Be the first to comment this post.</p>
-	<% end %>
+	
+	<ul class="js-list-comments">
+		<% @post.comments.each do |c| %>
+			<li>
+				<strong>Comment added:</strong></strong><%= ' '+ time_ago_in_words(c.created_at) %><spam> ago</spam><br><br>
+				Name: <%= c.commenter %><br>
+				<%= c.body %><br>
+			</li><br>
+		<% end %>
+	</ul>
    
   
 <!--The form_for call here uses an array -->
-	
+<div class="comment_box">
 	<h5 >Add a comment:</h5>
-		<%= form_for([@post, @post.comments.build]) do |f| %>
+   <%= form_for([@post, @post.comments.build], :html => {:class => 'js-comment_post'}) do |f| %>
   <p>
-    <%= f.label :Name %><br>
-    <%= f.text_field :commenter %>
+    <%= f.label :Name, class: 'label-names' %><br>
+    <%= f.text_field :commenter, class: "input_box" %>
   </p>
   <p>
-    <%= f.label :Comment %><br>
-    <%= f.text_area :body %>
+    <%= f.label :Comment, class: 'label-names' %><br>
+    <%= f.text_area :body, class: 'js-comment'%>
   </p>
   <p>
-    <%= f.submit %>
+  
+  <!-- Passing the post id to the button -->
+  <button class="js-submit" type="submit" value=<%=@post.id%> >Submit</button>
+   <%#= f.submit @post.id, class: "js-submit" %>
   </p>
 <% end %>
+</div>
 
 <!-- Only logged user(artist) and the owner of the post can modify the posts. The admin can't modify it-->
 <!-- Admin can delete posts only -->
