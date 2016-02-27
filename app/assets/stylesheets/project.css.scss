@@ -287,8 +287,9 @@ border-bottom: 2px solid black;
 	font-size: 16px;
 	margin: auto;
 	position: absolute;
-    left: 20px;
+    left: 30px;
     top: 2px;
+
 }
 #search_event,
 #search_location,
@@ -712,6 +713,13 @@ a.image_event:hover{
 .post{
 	font-size:18px;
 }
+.btn-post{
+   height: 27px;
+    border: none;
+    width: 90px;
+    position: relative;
+    left: -15px;
+  }
 .post_input{
 	margin-left: 245px;
 	margin-bottom: 12px;
@@ -940,6 +948,7 @@ a.image_event:hover{
 .btn-event{
 	height:30px;
 	border:none;
+	width: 90px;
 }
 
 .max-width-desc{
