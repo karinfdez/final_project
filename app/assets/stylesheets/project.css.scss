@@ -574,7 +574,12 @@ padding-top: 80px;
     background-color: black;
     z-index: -1;
     margin-left: 245px;
-    margin-top: -55px;
+}
+.bar_event{
+	margin-top: -55px;
+}
+.user_search{
+	margin-top: -48px;
 }
 
 
@@ -718,7 +723,8 @@ a.image_event:hover{
     border: none;
     width: 90px;
     position: relative;
-    left: -15px;
+    left: -2px;
+    top: 55px;
   }
 .post_input{
 	margin-left: 245px;
@@ -733,10 +739,11 @@ a.image_event:hover{
 #search_title,
 #search{
 	width:360px;
-}
-#search{
-	margin-right:20px;
-	margin-left: 20px;
+	margin-right:10px;
+	position: relative;
+    top: 54px;
+    border:none;
+
 }
 .top_list{
 	padding-top: 200px;
