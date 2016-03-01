@@ -66,7 +66,7 @@ margin-bottom: 80px
 #search_event,
 #search_location,
 .drop_down,.top_list p,
-.post
+.post,.align_center_edition
 {
 	font-family: 'BenchNine', sans-serif;
 }
@@ -294,6 +294,8 @@ border-bottom: 2px solid black;
 .search_user{
 	width: 100px;
 	height: 30px;
+	position: relative;
+    left: -20px;
 
 }
 /*Search button*/
@@ -419,8 +421,12 @@ margin-top:-80px;
 	padding-top: 75px;
 	text-align: center;
 	color:153,153,153;
-	padding-bottom: 75px;
+	padding-bottom: 77px;
 	// padding-bottom: 0;
+}
+.user_email{
+	color: #3fc4a9;
+	margin-top: -25px;
 }
 
 /*User page*/
@@ -437,7 +443,7 @@ margin-top:-80px;
 }
 
 .user_info{
-   padding-right: 80px
+   padding-right: 80px;
    
 }
 
@@ -447,6 +453,9 @@ margin-top:-80px;
 .align_center_edition{
 	padding-top: 25px;
 	padding-bottom:55px;
+	font-size: 20px;
+	position: relative;
+    left: 60px;
 	
 }
 .user_background{
@@ -722,7 +731,8 @@ a.image_event:hover{
 	// padding-bottom:130px;
 }
 .post-title{
-	margin-left: 170px;
+	margin-left: 160px;
+	margin-bottom:38px;
 	
 }
 .post{
@@ -771,7 +781,7 @@ a.image_event:hover{
 	padding-top: 200px;
 }
 .the_post{
-	padding-bottom: 30px;
+	padding-bottom: 60px;
 	margin-left:50px;
 }
 
@@ -828,7 +838,7 @@ a.image_event:hover{
 }
 .padding_posts{
 	padding-bottom:40px;
-	margin-left: 200px;
+	margin-left: 180px;
 }
 .posts_comments
 {
@@ -862,9 +872,13 @@ a.image_event:hover{
 }
 
 .padding_image{
+
 	margin-right: 40px;
 	float: left;
 	margin-bottom: 170px;
+	
+	// position: relative;
+ //    left: -66px;
 }
 .message_padding{
 	padding-bottom: 40px;
@@ -1014,6 +1028,8 @@ p .inline{
 .user_description{
 	margin-top: 100px;
 	margin-left: 200px;
+	position: relative;
+    left: -79px;
 }
 
 .home-section{
