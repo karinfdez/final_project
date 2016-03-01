@@ -8,11 +8,13 @@
 #container {
    min-height:100%;
    height: 100%;
+   margin-right:0;
    /*position:relative;*/
 
 }
-html, body {
+body {
 	height: 100%;
+	width:100%;
 }
 
 .wrapper {
@@ -29,8 +31,9 @@ margin: 0 auto -4em;
 .padding-footer{
 	padding-bottom:55px;
 }
+
 .margin-footer{
-margin-bottom: 55px
+margin-bottom: 80px
 }
 
 .text-home,.text-about,
@@ -56,6 +59,8 @@ margin-bottom: 55px
 	
 
 }
+
+
 .border-logo,
 .icon-search,
 #search_event,
@@ -183,10 +188,13 @@ margin-bottom: 55px
 
 .galleria{ 
  	width: 100%;
- 	height: 493px;
+ 	height: 530px;
+
  	/*default black background:*/
  	background: #000;
- 	margin-bottom: 80px;
+ 	margin-bottom: 170px;
+ 	margin-top: -10px;
+
  }
 
 
@@ -411,7 +419,7 @@ margin-top:-80px;
 	padding-top: 75px;
 	text-align: center;
 	color:153,153,153;
-	padding-bottom: 55px;
+	padding-bottom: 75px;
 	// padding-bottom: 0;
 }
 
@@ -433,6 +441,9 @@ margin-top:-80px;
    
 }
 
+.user-index{
+	padding-bottom: 50px;
+}
 .align_center_edition{
 	padding-top: 25px;
 	padding-bottom:55px;
@@ -540,6 +551,7 @@ margin-top:-80px;
 	font-size: 15px;
     /*width: 245px; */
     margin-right: 40px;
+    margin-right: 52px;
     height: 31px;
     border-radius: 0px;
     border: 0px;
@@ -1004,6 +1016,9 @@ p .inline{
 	margin-left: 200px;
 }
 
+.home-section{
+	background-color:black;
+}
 footer{
 	
 	background: -webkit-linear-gradient(left,rgba(63,196,169,0.7)30%, rgba(132,225,255,0.7)),
@@ -1014,4 +1029,5 @@ footer{
 
    	// margin-top: 80px;
 }
+
 

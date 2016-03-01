@@ -103,8 +103,9 @@ class PostsController < ApplicationController
 
 
     if params[:search].present?
+      author_search=params[:search].downcase
       author_search = "%#{params[:search]}%"
-      users = User.where("first_name LIKE ? OR last_name like ?", author_search, author_search)
+      users = User.where("first_name ILIKE ? OR last_name ILIKE ?", author_search, author_search)
       @posts_title = @posts_title.where(user_id: users.ids)
     end
   end
