@@ -66,7 +66,8 @@ margin-bottom: 80px
 #search_event,
 #search_location,
 .drop_down,.top_list p,
-.post,.align_center_edition
+.post,.align_center_edition,
+.list_posts
 {
 	font-family: 'BenchNine', sans-serif;
 }
@@ -357,10 +358,12 @@ margin-left: 490px;
 margin-top:-80px;
 }
 .new_user a{
+	width:100%;
 	font-size: 16px;
 	text-transform: uppercase;
 	color:#999999;
-	margin-bottom: 20px;
+
+	// margin-bottom: 300px;
 
 }
 .new_image_gallery{
@@ -728,7 +731,8 @@ a.image_event:hover{
 // Page Posts
 .list_posts{
 	margin-top:60px;
-	// padding-bottom:130px;
+	font-size: 30px;
+	// margin-bottom:210px;
 }
 .post-title{
 	margin-left: 160px;
@@ -781,7 +785,8 @@ a.image_event:hover{
 	padding-top: 200px;
 }
 .the_post{
-	padding-bottom: 60px;
+
+	// padding-bottom: 60px;
 	margin-left:50px;
 }
 
@@ -798,7 +803,7 @@ a.image_event:hover{
 {
 	
 	margin-top: -500px;
-	padding-bottom:200px;
+	padding-bottom:255px;
 
     
 }
@@ -837,7 +842,8 @@ a.image_event:hover{
     height: 200px;
 }
 .padding_posts{
-	padding-bottom:40px;
+	height:100%;
+	padding-bottom:50px;
 	margin-left: 180px;
 }
 .posts_comments
@@ -1035,12 +1041,40 @@ p .inline{
 .home-section{
 	background-color:black;
 }
+
+.listing_posts{
+	text-align:center;
+}
+.list_posts{
+	text-align: center;
+	height: 520px;
+	// margin-bottom:340px;
+}
+.center_message{
+	margin-top:120px;
+	text-align:center;
+	margin-bottom:440px;
+}
+.margin{
+	margin-top:20px;
+}
+
+.log_in{
+	position:relative;
+	left:46%;
+	color:white;
+}
+.password{
+	position:relative;
+	left:25px;
+}
 footer{
-	
+
 	background: -webkit-linear-gradient(left,rgba(63,196,169,0.7)30%, rgba(132,225,255,0.7)),
     center center no-repeat;
 	height: 55px;
-	position:absolute;
+    position:absolute;
+	
    	width:100%;
 
    	// margin-top: 80px;

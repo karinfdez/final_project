@@ -1,26 +1,28 @@
 <div class="list-posts style= margin-left: 550px
     padding-top: 120px">
 <!-- <p id="notice"><%= notice %></p> -->
-  <h1>Listing Posts</h1>
+  <h1 class="listing_posts">Listing Posts</h1>
    <!-- If there are posts created, show the posts -->
 
   <% if @posts.present? %>
-    <table>
+    <!-- <table>
       <thead>
         <tr>
           <th>Title</th>
           <th>Image</th>
-          <!-- <th>Author</th> -->
+          <th>Author</th>
           <!-- <th>Content</th> -->
-          <th colspan="3"></th>
+         <!--  <th colspan="3"></th>
         </tr>
-      </thead>
+      </thead> -->
 
-      <tbody>
-        <% @posts.each do |post| %>
-          <tr>
-            <td><a href='/posts/<%=post.id%>'><%= post.title %></td>
-            <td><img src='<%= post.image_url(:thumb) %>'></td>
+      <!-- <tbody> --> 
+        <div class=" row list_posts">
+        <% count=0%>
+          <% @posts.each do |post| %>
+          <!-- <tr> -->
+            <div class="margin"><a href='/posts/<%=post.id%>'><%=count+=1%>.<%= post.title %></a></div><br>
+            <!-- <span><img src='<%#= post.image_url(:thumb) %>'></span><br> -->
             <!-- <td><%#= @user.first_name+@user.last_name %></td> -->
             <!-- <td><%#= post.content %></td> -->
            <!--  <%#if current_user.present? && current_user.admin?%>
@@ -28,16 +30,18 @@
               <!-- <td><%#= link_to 'Edit', edit_user_post_path(@user, post) %></td> -->
               <!-- <td><%#= link_to 'Destroy', [@user, post], { data: { confirm: 'Are you sure?' }, method: :delete} %></td> -->
           <%# end%> 
-           </tr>
-        <% end%>
-      </tbody>
-    </table>
+         
+           <!-- </tr> -->
+        <% end %>
+      </div>
+      <!-- </tbody> -->
+    <!-- </table> -->
 
   <% else %>
-      <h4>This artist does not have any post available.</h4>
+      <h4 class="center_message">This artist does not have any post available.</h4>
   <% end%>
-  <br>
-   <%= link_to 'Back', user_path(@user) %>
+  <!-- <br> -->
+   <%#= link_to 'Back', user_path(@user) %>
 </div>
 <!-- <a href='/users/<%#=@user.id%>'>Back</a> -->
 
