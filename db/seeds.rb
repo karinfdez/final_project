@@ -8,4 +8,6 @@
 
 #Temporary way of creating administrator
 
-admin=Admin.create(first_name: 'Karin',last_name:'Fernandez',email:'karin@yahoo.com',password:'ironhack',confirm_password:'ironhack')
+
+User.create(first_name: 'Lola',last_name:'Rodriguez',email:'lola@yahoo.com',password:'ironhack',confirm_password:'ironhack',admin:false)
+User.create(first_name: 'John',last_name:'Doe',email:'john@yahoo.com',password:'ironhack',confirm_password:'ironhack',admin:false)
