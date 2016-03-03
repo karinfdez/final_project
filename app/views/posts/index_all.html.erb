@@ -15,19 +15,21 @@
 <h4 class="post-title">
 <div class="row padding_posts">
 	<% @posts_title.each do |post| %>
-	<div class="col-md-6 the_post style=text-align:center">
+	<div class=" list_post col-md-6 the_post style=text-align:center">
 	  <!-- <div class="post"> -->
 	    Post title: <%= link_to post.title, post,class: 'title_cap' %>
 		<%if post.user%> 
-	    <spam><p class="post-author">Author:<%=  post.user.first_name+' '+post.user.last_name%></p></spam>
-	  <% end %>
+	      <p class="post-author">Author:<%=  post.user.first_name+' '+post.user.last_name%></p>
+	    <% end %>
 	  <%if current_user.present? && current_user.admin?%>
-		<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure you want to remove post?' } %>
-		<% end%>
+		  <div class="destroy">
+			<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure you want to remove post?' } %>
+		 </div>
+	 <% end%>
+	 </div>
 	  <!-- </div> -->
-	  </div>
-	   <% end %>
-	   </div>
+	<% end %>
+</div>
 	  </h4>
 	<%# end %>
 

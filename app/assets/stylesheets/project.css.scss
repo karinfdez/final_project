@@ -29,15 +29,15 @@ html, body {
 .site-footer, .page-wrap:after {
   height: 142px; 
 }
-// .site-footer {
-//   background: orange;
-// }
-
-
-body {
-	// height: 100%;
-	width:100%;
+.site-footer {
+  background: orange;
 }
+
+
+// body {
+// 	// height: 100%;
+// 	width:100%;
+// }
 
 
 .wrapper {
@@ -67,7 +67,7 @@ margin-bottom: 80px
 .field,.alert,.event_image,
 .posts_comments p,.comments,
 .posts_comments,.image,.user_description,
-.edit-link,.list-event,.add_event
+.edit-link,.list-event,.add_event,.new_user
 
 {
 	font-family: 'Enriqueta', serif;
@@ -381,12 +381,17 @@ border-bottom: 2px solid black;
 // margin-left: 460px;
 margin-left: 490px;
 margin-top:-80px;
+position: relative;
+left: -60px;
+font-size: 20px;
+color: #337ab7;
+
 }
 .new_user a{
 	width:100%;
-	font-size: 16px;
+	font-size: 20px;
 	text-transform: uppercase;
-	color:#999999;
+	color: #337ab7;
 
 	// margin-bottom: 300px;
 
@@ -775,6 +780,9 @@ a.image_event:hover{
 }
 .post{
 	border:none;
+}
+.list_post{
+	margin-bottom:20px;
 }
 .post_background{
   
