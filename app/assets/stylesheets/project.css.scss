@@ -67,7 +67,7 @@ margin-bottom: 80px
 .field,.alert,.event_image,
 .posts_comments p,.comments,
 .posts_comments,.image,.user_description,
-.edit-link,.list-event 
+.edit-link,.list-event,.add_event
 
 {
 	font-family: 'Enriqueta', serif;
@@ -409,6 +409,13 @@ margin-top:-80px;
 }
 .list-event{
 	font-size:20px;
+}
+
+.add_event{
+	position:absolute;
+	left:45%;
+	font-size:20px;
+
 }
 .list-event a:hover,
 .new_user a:hover{
