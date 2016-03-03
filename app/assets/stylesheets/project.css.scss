@@ -193,7 +193,7 @@ margin-bottom: 80px
 
  	/*default black background:*/
  	background: #000;
- 	margin-bottom: 170px;
+ 	margin-bottom: 200px;
  	margin-top: -10px;
 
  }
@@ -838,8 +838,10 @@ a.image_event:hover{
 }
 
 #post_content{
-	width: 400px;
-    height: 200px;
+	width: 950px;
+    height: 230px;
+    position: absolute;
+    left: 190px;
 }
 .padding_posts{
 	height:100%;
