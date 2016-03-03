@@ -69,7 +69,7 @@ margin-bottom: 80px
 .posts_comments p,.comments,
 .posts_comments,.image,.user_description,
 .edit-link,.list-event,.add_event,.new_user,
-.log_in,.password
+.log_in,.password,.edit_title
 
 {
 	font-family: 'Enriqueta', serif;
@@ -420,9 +420,9 @@ color: #337ab7;
 .gal_form{
 	margin-top:60px;
 }
-.list-event{
-	font-size:20px;
-}
+// .list-event{
+// 	font-size:20px;
+// }
 
 .add_event{
 	position:absolute;
@@ -970,7 +970,7 @@ a.image_event:hover{
 	margin-top:-70px;
 	background: orange;
 	width:100%;
-	height:100vh;
+	height:100%;
 }
 
 .new_event{
@@ -1178,6 +1178,20 @@ p .inline{
 #post_content{
 	border:none;
 }
+.edit_event{
+  margin-top: 95px;
+}
+.edit_title{
+	position: relative;
+    top: 105px;
+    left: 210px;
+    color: white;
+}
+.back{
+	position:relative;
+	top:200px;
+}
+
 footer{
 
 	background: -webkit-linear-gradient(left,rgba(63,196,169,0.7)30%, rgba(132,225,255,0.7)),

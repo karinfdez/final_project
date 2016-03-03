@@ -352,6 +352,7 @@ DEPENDENCIES
   devise (~> 3.5.2)
   figaro
   fog
+  fog-aws
   jbuilder (~> 2.0)
   jquery-rails
   mini_magick (~> 4.3.6)
