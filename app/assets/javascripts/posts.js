@@ -62,7 +62,7 @@ $(document).on("ready", function () {
 	        // data: {comment: { commenter: commenter, body: comment}},
 			success: function(resp){
 			    var last_element=resp.comments[resp.comments.length-1];
-			   	  $(".js-list-comments").append(`<li><strong>Comment added:</strong> <span class='time-color'>${timeSince(Date.now())}</span><br>Name: ${last_element.commenter}<br>${last_element.body}<br></li>`)
+			   	  $(".js-list-comments").append(`<li><strong class='comment-js'>Comment added:</strong> <span class='time-color'>${timeSince(Date.now())}</span><br>Name: ${last_element.commenter}<br>${last_element.body}<br></li>`)
 			  	  $(".error-message").empty();
 			},
 			error: function(){

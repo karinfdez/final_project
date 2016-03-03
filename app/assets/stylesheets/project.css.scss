@@ -34,6 +34,7 @@ html, body {
 }
 
 
+
 // body {
 // 	// height: 100%;
 // 	width:100%;
@@ -88,6 +89,7 @@ margin-bottom: 80px
 .log_input{
 	border: none;
     width: 204px;
+    color:black;
 }
 
 
@@ -527,7 +529,7 @@ color: #337ab7;
 
 .comment_box{
 	margin: 0 auto;
-    background-color: gray;
+    background-color: #d3d3d3;
     width: 60em;
     position: relative;
     left: -13em;
@@ -968,7 +970,7 @@ a.image_event:hover{
 	margin-top:-70px;
 	background: orange;
 	width:100%;
-	height:100hv;
+	height:100vh;
 }
 
 .new_event{
@@ -1152,6 +1154,29 @@ p .inline{
   /*height: 70vh;*/
  background: -webkit-linear-gradient(rgba(0,22,45,0.5) 40%, rgba(255,255,255,0.2) 50%), asset-url("7.jpg") center center no-repeat;
  border: solid black 2px;
+}
+
+.comment-js{
+	margin-top:20px;
+}
+
+.post_create{
+	position: relative;
+    top: 290px;
+    left: 47%;
+}
+#post_title{
+	width:320px;
+	border:none;
+}
+.content_post{
+	position: relative;
+    left: 120px;
+    margin-top: 20px;
+}
+
+#post_content{
+	border:none;
 }
 footer{
 

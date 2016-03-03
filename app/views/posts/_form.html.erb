@@ -14,7 +14,7 @@
 
   <div class="field field_post post_title">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <%= f.text_field :title %>
   </div>
   <div class="field field_post">
     <%= f.label :image %><br>
@@ -26,10 +26,10 @@
     <%= f.text_field :author %>
   </div> -->
   <div class="field field_post">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
+    <div class="content_post"><%= f.label :content %></div><br>
+    <div class="border_content"><%= f.text_area :content %></div>
   </div>
-    <%= f.submit %>
+    <div class="post_create"><%= f.submit%></div>
   </div>
 <% end %>
 </div>
