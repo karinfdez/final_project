@@ -26,7 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 #To add authentication for users and admin
 gem 'devise','~>3.5.2'
-gem 'fog', group: :production
+gem 'fog', require: 'fog/aws', group: :production
 gem 'figaro'
 
 #Gem to process images(upload)
