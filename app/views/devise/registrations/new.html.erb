@@ -1,3 +1,4 @@
+<div class="page-wrap">
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -32,5 +33,21 @@
     <br><%= f.submit "Sign up" %>
   </div>
 <% end %>
-
+</div>
 <%= render "devise/shared/links" %>
+<footer class="footer-artist">
+        <div class="container">
+          <div class="asides clearfix">
+            <aside class="logo">
+            </aside>
+          </div>
+          <div class="copyright">
+            <small>2015 Cajon Project</small>
+            <div class="footer-icons">
+              <a href='http://www.facebook.com'><%= image_tag 'Icono_Face.png', alt: 'Facebook logo', :class => "logo_footer"%></a>
+              <a href='http://www.instagram.com'><%= image_tag 'Icono_Insta.png', alt: 'Instagram logo', :class => "logo_footer"%></a>
+              <a href='http://twitter.com'><%= image_tag 'Icono_Twit.png', alt: 'Twitter logo', :class => "logo_footer"%></a>
+            </div>
+          </div>
+        </div>
+</footer> 
