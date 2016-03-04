@@ -69,7 +69,7 @@ margin-bottom: 80px
 .posts_comments p,.comments,
 .posts_comments,.image,.user_description,
 .edit-link,.list-event,.add_event,.new_user,
-.log_in,.password,.edit_title,.back
+.log_in,.password,.edit_title,.back,
 
 {
 	font-family: 'Enriqueta', serif;
@@ -388,10 +388,10 @@ border-bottom: 2px solid black;
 }
 .new_user{
 // margin-left: 460px;
-margin-left: 490px;
+// margin-left: 490px;
 margin-top:-80px;
 position: relative;
-left: -60px;
+left: 220px;
 // font-size: 20px;
 color: #337ab7;
 
@@ -399,8 +399,9 @@ color: #337ab7;
 .new_user a{
 	width:100%;
 	// font-size: 20px;
-	text-transform: uppercase;
+	// text-transform: uppercase;
 	color: #337ab7;
+	
 
 	// margin-bottom: 300px;
 
@@ -629,10 +630,15 @@ color: #337ab7;
 }
 #new_user{
 padding-top: 80px;
+
 }
 .text_area_user{
    width: 300px;
    height: 100px;
+    position: relative;
+    left: -249px;
+    width: 580px;
+    height: 140px;
 }
 .submit-new-user{
 	margin-left: 80px;
@@ -640,10 +646,11 @@ padding-top: 80px;
 
 .form_new_user_margin{
 	 // margin-top: -30px;
-	margin-bottom: 50px;
+	// margin-bottom: 50px;
 	background-color:orange;
 	height:850px;
 	padding-top: 100px;
+	height:100%;
 	
 	
 }
@@ -702,6 +709,7 @@ padding-top: 80px;
 .user_title{
 	text-align:center;
 	margin-top: 80px;
+	color:white;
 }
 
 .image-gallery-image{
@@ -1205,6 +1213,31 @@ p .inline{
 	position:absolute;
 	bottom:0;
 	left:0;
+}
+.add_event{
+	font-size:20px;
+}
+.new_user{
+	font-size:20px;
+	text-align:center;
+}
+.user_input{
+	height:25px;
+	border:none;
+	position:relative;
+	left:-250px;
+}
+.user_titles{
+	position:relative;
+	left:-250px;
+	padding-top:20px;
+}
+.user_file{
+	position:relative;
+	left:240px;
+}
+.div{
+	color: #337ab7;
 }
 
 footer{

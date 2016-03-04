@@ -32,7 +32,7 @@
  
         <div class="list-event row">
   <% if current_user.present? and current_user.admin? %>
-   <%= link_to 'Add Event', new_event_path %>
+   <%= link_to 'Add Event', new_event_path,class: "add_event" %>
   <% end %>
 <!-- <spam><%#= link_to 'Back',events_path %></spam> -->
 <br>
@@ -46,7 +46,7 @@
             
           <% if current_user.present? and current_user.admin? %>
           <div class="link-admin">
-           <spam style="color:rgb(77,77,77)"><%= link_to 'Edit', edit_event_path(event) %></spam>
+           <spam style="color:rgb(77,77,77)"><%= link_to 'Edit', edit_event_path(event) %> | </spam>
             <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %><br>
           </div>
           <% end %>
