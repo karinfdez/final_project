@@ -36,8 +36,10 @@
     handler = Gmaps.build('Google');
     handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
     markers = handler.addMarkers(<%=raw @hash.to_json %>);
+    // Center the map on USA
+    handler.map.centerOn([39.50, -98,35]);
     handler.bounds.extendWith(markers);
-    handler.fitMapToBounds();
+    handler.getMap().setZoom(3);
   });
 
   </script>
