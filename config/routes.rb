@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get "pages/about"=>"pages#about"
   get "pages/gallery"=>"image_galleries#index"
   root "pages#show", page: "home"
+  get '/maps'=>'events#index_map'
   
 end
 

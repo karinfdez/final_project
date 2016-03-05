@@ -2,10 +2,10 @@ class EventsController < ApplicationController
 
   
   #Authenticate user when trying to edit, create or modify events(if it's not log in).
-  before_action :authenticate_user!,except: [:index,:show]
+  before_action :authenticate_user!,except: [:index,:show,:index_map]
 
     #Apply this method for this actions.
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   # GET /events
   # GET /events.json
@@ -48,24 +48,13 @@ class EventsController < ApplicationController
       month_range = Date.today.at_beginning_of_month..Date.today.at_end_of_month
       @events=@events.where(start_date: month_range)
     end  
-    @hash = Gmaps4rails.build_markers(@events) do |event, marker|
-       marker.lat event.latitude
-       marker.lng event.longitude
-       # Shows on map the event's description
-       marker.infowindow event.title
-       marker.picture({
-          "url"=>"http://maps.google.com/mapfiles/ms/micons/yen.png",
-          "width" =>35,
-          "height" => 35})
-       marker.json({title: event.title})
-    end
 end
 
   # GET /events/1
   # GET /events/1.json
   def show
     @event=Event.find_by(id: params[:id])
-    
+
     # To show events on Google Maps
     @hash = Gmaps4rails.build_markers(@event) do |event, marker|
        marker.lat event.latitude
@@ -73,7 +62,8 @@ end
        # Shows on map the event's description
        marker.infowindow event.title
        marker.picture({
-          "url"=>"http://maps.google.com/mapfiles/ms/micons/yen.png",
+        # Add the red pin to the map
+          "url"=>"http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png",
           "width" =>35,
           "height" => 35})
        marker.json({title: event.title})
@@ -81,6 +71,24 @@ end
     end
     
   end
+
+  def index_map
+     @events=Event.where('ends_date >= ?', Time.now).order("start_date DESC")
+
+      @hash = Gmaps4rails.build_markers(@events) do |event, marker|
+       marker.lat event.latitude
+       marker.lng event.longitude
+       # Shows on map the event's description
+       marker.infowindow event.title
+       marker.picture({
+        # Adds the red pin to the map
+          "url"=>"http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png",
+          "width" =>35,
+          "height" => 35})
+       marker.json({title: event.title})
+    end
+  end
+
 
   # GET /events/new
   def new
@@ -131,6 +139,8 @@ end
       format.json { head :no_content }
     end
   end
+
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.
