@@ -1,24 +1,10 @@
-# == Schema Information
-#
-# Table name: events
-#
-#  id             :integer          not null, primary key
-#  title          :string
-#  location       :string
-#  start_date     :datetime
-#  ends_date      :datetime
-#  image          :string
-#  description    :string
-#  organizer_name :string
-#  event_type     :string
-#  created_at     :datetime         not null
-#  updated_at     :datetime         not null
-#
-
 class Event < ActiveRecord::Base
 	#Events validations
+	geocoded_by :location
+	after_validation :geocode
 	validates :title,:location,:description, :organizer_name,:event_type,presence: true
 	validates :title,:organizer_name,length: { minimum: 1 }
+
 	#To load images to the event (uploader/image_uploader)
 	mount_uploader :image, ImageUploader
 

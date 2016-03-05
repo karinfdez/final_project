@@ -42,10 +42,18 @@ gem 'redis-rails' # Will install several other redis-* gems
 # Resque
 gem 'resque'
 # Resque Scheduler
+
+group :assets do
+  gem 'coffee-rails'
+end
+
 gem 'resque-scheduler'
 #To Heroku
 gem 'rails_12factor', group: :production
 
+# To show events on google map
+gem 'geocoder'
+gem 'gmaps4rails'
 #To schedule tasks.This gem schedules the tasks by creating cron jobs on server
 
 # Use ActiveModel has_secure_password

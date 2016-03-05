@@ -96,13 +96,14 @@ class PostsController < ApplicationController
      # @posts = Post.search(params[:search])
      # @posts = Post.order("title ASC").all
     if params[:search_title].present?
+      
       @posts_title = Post.search(params[:search_title]).order("created_at DESC")
     else
       @posts_title= Post.order("created_at DESC")
     end
 
 
-    if params[:search].present?
+    if params[:search].present? 
       author_search=params[:search].downcase
       author_search = "%#{params[:search]}%"
       users = User.where("first_name ILIKE ? OR last_name ILIKE ?", author_search, author_search)

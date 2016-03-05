@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151214164046) do
+ActiveRecord::Schema.define(version: 20160305123322) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +58,8 @@ ActiveRecord::Schema.define(version: 20151214164046) do
     t.string   "event_type"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   create_table "image_galleries", force: :cascade do |t|
@@ -66,6 +68,26 @@ ActiveRecord::Schema.define(version: 20151214164046) do
     t.json     "picture"
     t.string   "title"
     t.date     "date"
+  end
+
+  create_table "musics", force: :cascade do |t|
+    t.string   "image"
+    t.string   "document"
+    t.string   "audio"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "document_file_name"
+    t.string   "document_content_type"
+    t.integer  "document_file_size"
+    t.datetime "document_updated_at"
+    t.string   "audio_file_name"
+    t.string   "audio_content_type"
+    t.integer  "audio_file_size"
+    t.datetime "audio_updated_at"
   end
 
   create_table "photos", force: :cascade do |t|

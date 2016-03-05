@@ -48,11 +48,38 @@ class EventsController < ApplicationController
       month_range = Date.today.at_beginning_of_month..Date.today.at_end_of_month
       @events=@events.where(start_date: month_range)
     end  
-  end
+    @hash = Gmaps4rails.build_markers(@events) do |event, marker|
+       marker.lat event.latitude
+       marker.lng event.longitude
+       # Shows on map the event's description
+       marker.infowindow event.title
+       marker.picture({
+          "url"=>"http://maps.google.com/mapfiles/ms/micons/yen.png",
+          "width" =>35,
+          "height" => 35})
+       marker.json({title: event.title})
+    end
+end
 
   # GET /events/1
   # GET /events/1.json
   def show
+    @event=Event.find_by(id: params[:id])
+    
+    # To show events on Google Maps
+    @hash = Gmaps4rails.build_markers(@event) do |event, marker|
+       marker.lat event.latitude
+       marker.lng event.longitude
+       # Shows on map the event's description
+       marker.infowindow event.title
+       marker.picture({
+          "url"=>"http://maps.google.com/mapfiles/ms/micons/yen.png",
+          "width" =>35,
+          "height" => 35})
+       marker.json({title: event.title})
+        
+    end
+    
   end
 
   # GET /events/new
@@ -119,6 +146,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:title, :location, :start_date, :ends_date, :image, :description, :organizer_name, :event_type)
+      params.require(:event).permit(:title,:latitude,:longitude,:location, :start_date, :ends_date, :image, :description, :organizer_name, :event_type)
     end
 end
