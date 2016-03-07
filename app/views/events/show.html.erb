@@ -38,19 +38,19 @@
     <div id="map" style='width: 800px; height: 300px;'></div>
   </div>
   <script type="text/javascript">
-    // buildMap(<%=raw @hash.to_json %>)
-    handler = Gmaps.build('Google')
-    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-    markers = handler.addMarkers(<%=raw @hash.to_json %>)
-    handler.bounds.extendWith(markers)
-    // The first one alocate the place and the second one makes the zoom
-    handler.fitMapToBounds()  //This is the default zoom
-    handler.getMap().setZoom(18)
-    // Disable mouse's zoom
-    map.disableScrollWheelZoom();
-
-    
-  });
+    // buildMap(<%#=raw @hash.to_json %>)
+    $(document).on("ready", function(){
+        handler = Gmaps.build('Google')
+        handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+        markers = handler.addMarkers(<%=raw @hash.to_json %>)
+        handler.bounds.extendWith(markers)
+        // The first one alocate the place and the second one makes the zoom
+        handler.fitMapToBounds()  //This is the default zoom
+        handler.getMap().setZoom(18)
+        // Disable mouse's zoom
+        map.disableScrollWheelZoom();
+      });
+    })
 
   </script>
 
