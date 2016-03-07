@@ -77,6 +77,7 @@ end
 
 # To upload videos:
 gem 'paperclip', '~> 4.3.1'
+# To configure with s3 amazon account
 gem 'aws-sdk', '< 2.0'
 gem 'paperclip-av-transcoder'
 gem "paperclip-ffmpeg", "~> 1.2.0"
