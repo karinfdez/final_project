@@ -1476,13 +1476,16 @@ p .inline{
 
 .edit-event-only{
 
-	position: absolute;
+	// position: absolute;
+	padding-left: 550px;
     top: 622px;
     left: 601px;
     font-size: 18px;
 }
 
-
+.organizer{
+	padding-left: 510px;
+}
 
 footer{
 
