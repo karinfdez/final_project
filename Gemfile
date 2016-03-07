@@ -64,7 +64,9 @@ gem 'gmaps4rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+# To public and subscribe to messages through Faye
+gem 'private_pub'
+gem 'thin'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -72,6 +74,14 @@ group :development, :test do
   gem 'awesome_print'
   gem 'pry'
 end
+
+# To upload videos:
+gem 'paperclip', '~> 4.3.1'
+gem 'aws-sdk', '< 2.0'
+gem 'paperclip-av-transcoder'
+gem "paperclip-ffmpeg", "~> 1.2.0"
+
+
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views

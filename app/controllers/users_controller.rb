@@ -54,7 +54,7 @@ class UsersController < ApplicationController
 
 	def edit
 
-  end
+    end
 
   def update
     respond_to do |format|
@@ -67,7 +67,7 @@ class UsersController < ApplicationController
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
-	end
+  end
 
 	def show
 
@@ -93,7 +93,7 @@ class UsersController < ApplicationController
 	end
 
 	def user_params
-      params.require(:user).permit(:first_name, :last_name,:image,:email,:users_description,:password, :password_confirmation)
+      params.require(:user).permit(:first_name, :last_name,:image,:email,:users_description,:password, :password_confirmation,:video)
 
     end
 end

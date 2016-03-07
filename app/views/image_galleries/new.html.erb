@@ -1,12 +1,43 @@
-<div class="form_new_user_margin page-wrap">
+<div class="form_new_user_margin image_new page-wrap gallery_new">
 	<div class="new_image_gallery">
 		<h3 class="gallery_title">New Image Gallery</h3>
 
-		<%= render 'form' %>
+		<%#= render 'form' %>
+		<div class='new-gallery'>
+			
+			<%= form_for(@image_gallery) do |f| %>
+			  <% if @image_gallery.errors.any? %>
+			    <div id="error_explanation">
+			      <h2><%= pluralize(@image_gallery.errors.count, "error") %> prohibited this image_gallery from being saved:</h2>
 
-		<%= link_to 'Back', image_galleries_path %>
+			      <ul>
+			      <% @image_gallery.errors.full_messages.each do |message| %>
+			        <li><%= message %></li>
+			      <% end %>
+			      </ul>
+			    </div>
+			  <% end %>
+
+			   <div class="field gal_form">
+			  <%= f.label :title %>
+			  <%= f.text_field :title%><br>
+			  <%= f.label :date %>
+			    <%= f.date_field :date %><br>
+			    <%= f.label :picture, class: "picture_title" %>
+			    <div class="padding_uploader">
+			    <%= f.file_field :picture, multiple: true %><br>
+			  </div>
+			  
+			  <div class="actions button_gallery">
+			    <%= f.submit %>
+			  </div>
+			<% end %>
+			</div>
+		</div>
+
+		<%= link_to 'Back', image_galleries_path, class: "back_gallery" %>
 	</div>
-</div>
+
 <footer class="footer-artist">
 				<div class="container">
 					<div class="asides clearfix">
@@ -23,3 +54,4 @@
 					</div>
 				</div>
 </footer> 
+</div>

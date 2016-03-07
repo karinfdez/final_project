@@ -69,7 +69,8 @@ margin-bottom: 80px
 .posts_comments p,.comments,
 .posts_comments,.image,.user_description,
 .edit-link,.list-event,.add_event,.new_user,
-.log_in,.password,.edit_title,.back,
+.log_in,.password,.edit_title,.back,.artist_video_tag,
+.edit-event-only
 
 {
 	font-family: 'Enriqueta', serif;
@@ -212,6 +213,20 @@ margin-bottom: 80px
 	font-size: 16px;
 
 }
+.new_event_title{
+	color:white;
+	position: relative;
+    top: 130px;
+    left: 260px;
+    font-size: 20px;
+
+}
+.event-image{
+	width: 300px;
+    height: 171px;
+    position: relative;
+    left: -5px;
+}
 
  .title{
  	font-size: 16px;
@@ -222,11 +237,11 @@ margin-bottom: 80px
 
 .galleria{ 
  	width: 100%;
- 	height: 530px;
+ 	height: 85vh;
 
  	/*default black background:*/
  	background: #000;
- 	margin-bottom: 200px;
+ 	// margin-bottom: 200px;
  	margin-top: -10px;
 
  }
@@ -409,6 +424,10 @@ color: #337ab7;
 }
 .new_image_gallery{
 	text-align: center;
+    position: relative;
+    top: -100px;
+ //    right: 53px;
+
 }
 
 .padding_uploader{
@@ -419,9 +438,17 @@ color: #337ab7;
 }
 .gallery_title{
 	padding-top: 60px;
+	position:relative;
+	top:-100px;
+	color:white;
 }
 .gal_form{
-	margin-top:60px;
+	// margin-top:10px;
+	position: relative;
+    left: -50px;
+}
+.back_gallery{
+	font-size:20px;
 }
 // .list-event{
 // 	font-size:20px;
@@ -448,9 +475,9 @@ color: #337ab7;
     width: 324px;
     height: 325px;
     margin-left: 84px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     padding-top: 20px;
-    margin-top: 45px;
+    // margin-top: 45px;
     
 }
 #edit_event_34{
@@ -476,9 +503,9 @@ color: #337ab7;
 	color:153,153,153;
 	padding-bottom: 77px;
 	position: relative;
-    left: -7%;
+    left: -60px;
     color: #337ab7;
-    left: 10px;
+  
 	// padding-bottom: 0;
 }
 .user_email{
@@ -494,6 +521,12 @@ color: #337ab7;
 }
 .user-search{
 	margin-top: -170px;
+}
+.specific_new{
+	position: relative;
+    left: 428px;
+    font-size: 20px;
+    top: 20px;
 }
 .user_name{
 	padding-top: 30px;
@@ -650,17 +683,17 @@ left: -40px;
 .form_new_user_margin{
 	 // margin-top: -30px;
 	// margin-bottom: 50px;
-	background-color:orange;
-	height:850px;
-	padding-top: 100px;
-	height:100%;
+	// background-color:orange;
+	background-color: orange;
+    height: 100%;
+     padding-top: 320px;
 	
 	
 }
 
 
 .padding{
-	padding-bottom: 55px;
+	// padding-bottom: 55px;
 	display:block;
 }
 
@@ -720,12 +753,29 @@ left: -40px;
 	height:300px;
 
 }
+#image_gallery_title,#image_gallery_date{
+	margin-top:20px;
+	border: none;
+    width: 220px;
+}
+
+#image-gal{
+	color: #337ab7;
+    font-size: 20px;
+    position: relative;
+    top: 15px;
+}
 
 .list_images{
 	
 	text-align:center;
 	margin-bottom: 45px;
 
+}
+.picture_title{
+	position: relative;
+    left: -120px;
+    top: 25px;
 }
 .each_image img{
 
@@ -774,6 +824,10 @@ a.image_event:hover{
 .image{
 	padding-top: 40px;
 	padding-bottom:25px;
+}
+#image_gallery_picture{
+	position: relative;
+    left: -20px;
 }
 .spam44 img{
 	// padding-bottom:55px;
@@ -843,7 +897,8 @@ a.image_event:hover{
 	text-transform: uppercase;
 }
 .searcher{
-	// margin-top:-220px;
+	position: relative;
+    top: -227px;
 }
 #search_title,
 #search{
@@ -854,9 +909,7 @@ a.image_event:hover{
     border:none;
 
 }
-.top_list{
-	padding-top: 200px;
-}
+
 .the_post{
 
 	// padding-bottom: 60px;
@@ -1099,7 +1152,9 @@ p .inline{
 
 
 .background_new_post{
-	    padding-bottom: 100px;
+	   
+    height: 100vh;
+	    // padding-bottom: 100px;
 	// height: 450px;
 }
 
@@ -1169,6 +1224,8 @@ p .inline{
 .image_users{
 	position:relative;
 	left:-10px;
+	width: 134px;
+	height: 134px;
 }
 .post_list{
 	width: 100%;
@@ -1211,7 +1268,7 @@ p .inline{
 }
 .back{
 	position:relative;
-	top:-20px;
+	top:-40px;
 	// top:200px;
 }
 .bottom-footer{
@@ -1240,6 +1297,7 @@ p .inline{
 .user_file{
 	position:relative;
 	left:240px;
+
 }
 .div{
 	color: #337ab7;
@@ -1259,7 +1317,166 @@ p .inline{
 
 }
 
+.default_image{
+	width:40px;
+	height:40px;
+}
 
+.footer_galleria{
+	 position:absolute;
+
+	// bottom:0;
+	// left:0;
+
+}
+.post-no{
+	padding-bottom:-24px;
+	margin-top:-20px;
+	left:4px;
+}
+.message-no{
+	left:-10px;
+	margin-bottom:-77px;
+}
+.list-event{
+	padding-top: 60px;
+}
+// .footer_show{
+// 	height:57px;
+// }
+.padding_footer_event{
+	top: -45px;
+    left: 50px;
+}
+.new_back{
+	top: -35px;
+    left: 0px;
+}
+.background_edit_gallery{
+	// position:relative;
+	// left:80px;
+	background-color:orange;
+	height:90vh;
+	// margin-bottom:-55px;
+	width:100%;
+	// padding-top:11px;
+	min-height:100%;
+}
+.footer_edit_gallery{
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+.new_user_input{
+	position: relative;
+    left: 240px;
+    top: -210px;
+}
+.create_user{
+	position: relative;
+    top: -210px;
+    left: -10px;
+}
+.image_tag{
+	position: relative;
+    left: -420px;
+}
+.new_position{
+	left:140px;
+}
+.new_user_video{
+	
+    position: absolute;
+    top: 475px;
+    left: 480px;
+}
+.new_video {
+    color: white;
+    position: absolute;
+    top: 450px;
+    left: 495px;
+}
+
+.new_user_area{
+	height:200px;
+	width:30%;
+}
+.submit-to-user{
+	position: absolute;
+    top: 110%;
+    right: 63%;
+    width: 100px;
+
+}
+.edit_user{
+	position: relative;
+    left: 40%;
+    top: -80px;
+
+}
+.edit-user-tag{
+	position: absolute;
+    top: 28%;
+    left: 48%;
+    color:white;
+    font-size:18px;
+}
+.back_edit_user{
+	font-size: 20px;
+    position: relative;
+    top:-25px;
+    left: 48%;
+}
+.artist_video{
+	max-width: 100%;
+    width: 50%;
+    position: relative;
+    left: 25%;
+    margin-bottom: 50px;
+
+}
+.artist_video_tag{
+	color: #337ab7;
+	text-align:center;
+	font-size:15px;
+}
+.list_back{
+	margin-top: 110px;
+	position:relative;
+    left: 40%;
+}
+#event_map{
+
+    position: relative;
+    left: 20%;
+    margin-bottom: 50px;
+}
+.post_footer{
+	margin-top:8%;
+}
+.edit_post_tag{
+	position: relative;
+    top: 164px;
+    left: 200px;
+    color: white;
+}
+
+// .new_user_post{
+// 	position: absolute;
+//     left: 622px;
+//     top: 135px;
+// }
+// .edit-back-event{
+// 	width:100px;
+// }
+
+.edit-event-only{
+
+	position: absolute;
+    top: 622px;
+    left: 601px;
+    font-size: 18px;
+}
 
 footer{
 

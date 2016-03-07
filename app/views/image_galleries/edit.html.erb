@@ -1,12 +1,45 @@
-<div class="page-wrap">
+<div class="background_edit_gallery">
+<!-- <div class="page-wrap"> -->
+
 <h1>Editing Image Gallery</h1>
 
-<%= render 'form' %>
+<%#= render 'form' %>
+<div class="edit-gallery">
+	
+	<%= form_for(@image_gallery) do |f| %>
+	  <% if @image_gallery.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@image_gallery.errors.count, "error") %> prohibited this image_gallery from being saved:</h2>
+
+	      <ul>
+	      <% @image_gallery.errors.full_messages.each do |message| %>
+	        <li><%= message %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+
+	   <div class="field gal_form">
+	  <%= f.label :title %>
+	  <%= f.text_field :title%><br>
+	  <%= f.label :date %>
+	    <%= f.date_field :date %><br>
+	    <%= f.label :picture %>
+	    <div class="padding_uploader">
+	    <%= f.file_field :picture, multiple: true %><br>
+	  </div>
+	  
+	  <div class="actions button_gallery">
+	    <%= f.submit %>
+	  </div>
+	<% end %>
+	</div>
+
 
 <%= link_to 'Show', @image_gallery %> |
 <%= link_to 'Back', image_galleries_path %>
 </div>
-<footer class="footer-artist">
+<footer class="footer-artist footer_edit_gallery">
 				<div class="container">
 					<div class="asides clearfix">
 						<aside class="logo">
@@ -22,3 +55,5 @@
 					</div>
 				</div>
 </footer> 
+<!-- </div> -->
+</div>

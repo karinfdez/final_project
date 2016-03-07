@@ -8,7 +8,7 @@
   </ul>
 <% end %>
 <div class="form">
-<%= form_for @user do |f| %>
+<%= form_for @user,html: { multipart: true } do |f| %>
 
   <div class="field">
     <%= f.label :first_name,class: "user_titles" %><br />
@@ -46,11 +46,14 @@
     <%= f.label :description, class: "user_titles" %><br/>
     <%= f.text_area :users_description, autofocus: true,class: "text_area_user" %>
   </div>
-
+  <p class="message_container"></p>
+ <%= f.file_field :video %>
   <button class="submit-new-user" type='submit'>Submit</button>
    
 <% end %>
 </div>
+
 </section>
+
 
 

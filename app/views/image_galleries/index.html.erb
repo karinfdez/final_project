@@ -5,7 +5,7 @@
  <div class="list_images">
  <%if current_user.present? && current_user.admin?%>
  
-  <p class="image"><%= link_to 'Add new Image gallery' , new_image_gallery_path %></p>
+  <p class="image"><%= link_to 'Add new Image gallery' , new_image_gallery_path, id: "image-gal" %></p>
   <% end %>
       <% @image_galleries.each do |image_gallery| %>
         <div class="row">

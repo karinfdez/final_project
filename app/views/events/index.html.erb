@@ -33,19 +33,19 @@
  </div>
  <div class="bar bar_event"></div>
 <div class="event-list">
+<% if current_user.present? and current_user.admin? %>
+   <%= link_to 'Add Event', new_event_path,class: "add_event" %>
+  <% end %>
 <!-- <h4>Listing Events</h4> -->
  <% if @events.present?%>
  
         <div class="list-event row">
-  <% if current_user.present? and current_user.admin? %>
-   <%= link_to 'Add Event', new_event_path,class: "add_event" %>
-  <% end %>
 <!-- <spam><%#= link_to 'Back',events_path %></spam> -->
 <br>
          <% @events.each do |event| %>
           <div class="col-md-4 event">
             <a href="/events/<%=event.id%>"><p class="event-top" style="color:rgb(77,77,77)"><%=event.event_type%></p>
-            <img src='<%= event.image_url(:event_image)%>'>
+            <img class="event-image" src='<%= event.image_url(:event_image)%>'>
           <spam style="color:rgb(77,77,77)"><%=event.start_date %></spam><br>
           <spam class="event-title" style="color:rgb(77,77,77)"><%= event.title%></spam><br>
           <spam style="color:rgb(77,77,77)"><%= event.location %></spam></a><br>
@@ -60,11 +60,11 @@
       <% end %>
 <br>
     <% else%>
-      <p class="no-event">Sorry, there are no events.</p><br>
+      <p class="no-event message-no">Sorry, there are no events.</p><br>
         <!-- Only admin can modify, destroy and create events. -->
-         <% if current_user.present? and current_user.admin? %>
-          <%= link_to 'Add Event', new_event_path, :class => "add_event" %>
-        <% end %>
+         <%# if current_user.present? and current_user.admin? %>
+          <%#= link_to 'Add Event', new_event_path, :class => "add_event" %>
+        <%# end %>
     <% end %>
     <br>
   </div>

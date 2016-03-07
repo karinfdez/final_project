@@ -1,12 +1,69 @@
 <div class="form_new_user_margin page-wrap">
 
 
-	<h4 class="user_title">Create New user:</h4>
+	<h4 class="user_title create_user">Create New user:</h4>
+	
+	<section class="user_form">
+<% if @user.errors.any? %>
+  <ul>
+    <% @user.errors.full_messages.each do |err| %>
+      <li><%= err %></li>
+    <% end %>
+  </ul>
+<% end %>
+<div class="form new_user_input">
+<%= form_for @user,html: { multipart: true } do |f| %>
 
-	<%= render 'form' %>
+  <div class="field">
+    <%= f.label :first_name,class: "user_titles" %><br />
+    <%= f.text_field :first_name, autofocus: true,class: "user_input" %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name,class: "user_titles" %><br />
+    <%= f.text_field :last_name, autofocus: true, class: "user_input" %>
+  </div>
+  <div class="field">
+    <%= f.label :email,class: "user_titles" %><br />
+    <%= f.email_field :email, autofocus: true,  class: "user_input" %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :password,class: "user_titles" %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off",  class: "user_input" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, class: "user_titles" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "user_input" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :image, class: "user_titles image_tag" %><br>
+    <%= f.file_field :image, class: "user_file new_position" %>
+ 
+  <p class="message_container"></p>
+  <%= f.label :video, class: "new_video" %>
+ <%= f.file_field :video,class: "new_user_video" %>
+  <button class="submit-new-user submit-to-user" type='submit'>Submit</button>
+   </div>
+
+  <div class="field">
+    <%= f.label :description, class: "user_titles" %><br/>
+    <%= f.text_area :users_description, autofocus: true,class: "text_area_user new_area_user" %>
+  </div>
+  
+<% end %>
+</div>
+
+</section>
+	<%#= render 'form' %>
 	<!-- </div> -->
 
-	<%= link_to 'Back',  users_path,class: "back margin-back-user" %>
+	<%#= link_to 'Back',  users_path,class: "back margin-back-user" %>
  
 </div>
 

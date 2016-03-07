@@ -1,25 +1,4 @@
-# == Schema Information
-#
-# Table name: users
-#
-#  id                     :integer          not null, primary key
-#  first_name             :string
-#  last_name              :string
-#  email                  :string           default(""), not null
-#  encrypted_password     :string           default(""), not null
-#  reset_password_token   :string
-#  reset_password_sent_at :datetime
-#  remember_created_at    :datetime
-#  sign_in_count          :integer          default(0), not null
-#  current_sign_in_at     :datetime
-#  last_sign_in_at        :datetime
-#  current_sign_in_ip     :string
-#  last_sign_in_ip        :string
-#  created_at             :datetime         not null
-#  updated_at             :datetime         not null
-#  users_description      :string
-#  admin                  :boolean          default(FALSE)
-#
+
 
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
@@ -38,5 +17,23 @@ class User < ActiveRecord::Base
   
   has_many :comments
   has_many :posts
+  # Live chat
+  # Because the user_id column isn't on the conversation table,
+  # it's assign this foreign in order for rails know wich table user is related.
+  has_many :conversations, :foreign_key => :sender_id
+
+
+   # has_attached_file :video,
+   #  styles: lambda { |a| a.instance.is_image? ? {:small => "x200>", :medium => "x300>", :large => "x400>"}  : {:thumb => { :geometry => "100x100#", :format => 'jpg', :time => 10}, :medium => { :geometry => "300x300#", :format => 'jpg', :time => 10}}},
+   #  processors: lambda { |a| a.is_video? ? [ :ffmpeg ] : [ :thumbnail ] }
+ 
+ has_attached_file :video, styles: {
+          :medium => {
+          :geometry => "640x480",
+          :format => 'mp4'
+        },
+       :thumb => { :geometry => "160x120", :format => 'jpeg', :time => 10}
+    }, :processors => [:transcoder]
+    validates_attachment_content_type :video, content_type: /\Avideo\/.*\Z/
 
 end

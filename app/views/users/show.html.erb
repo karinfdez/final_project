@@ -11,15 +11,21 @@
 	</div>
 
 	<div class="align_center_edition">
-	<%if current_user.present? && current_user.id==@user.id && !current_user.admin%>
-		<a href='/users/<%=@user.id%>/posts/new'>Create new post|</a>
-    <% end %>
-		
-	
-	<a href='/users/<%=@user.id%>/posts'>List of posts |</a>
-	<a href='/users'>Back</a>
-	</div>
 
+		
+	<div class="list_back">
+		<a href='/users/<%=@user.id%>/posts'>List of posts |</a>
+		<a href='/users'>Back</a>
+		<%if current_user.present? && current_user.id==@user.id && !current_user.admin%>
+		<span><a class="new_user_post" href='/users/<%=@user.id%>/posts/new'>| Create new post</a></span>
+    <% end %>
+	</div>
+	</div>
+	<% if @user.video.present?%>
+	<p class="artist_video_tag">Artist video:</p>
+	<%#= video_tag(@user.video.url) %>
+		<%= video_tag @user.video.url(:medium), controls: true, style: "max-width: 100%;",class: "artist_video" %>
+	<% end %>
 <footer class="footer-artist ">
 				<div class="container">
 					<div class="asides clearfix">

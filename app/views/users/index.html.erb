@@ -21,22 +21,28 @@
     <div class="list_users clearfix">
       <div class="add_back">
       <% if current_user.present? && current_user.admin? %>
-      <spam class="new_user"><%= link_to 'New User',  new_user_path,class: "new_user" %></spam>
+      <spam class="new_user"><%= link_to 'New User',  new_user_path,class: "new_user",class: "specific_new" %></spam>
       <% end %>
       <!-- <spam class="new_user"><%= link_to 'Back', users_path%></spam> -->
       </div>
       <br>
       <%if @users.count>0%>
       <!-- <div class="row"> -->
-      <% @users.each do |user| %>
-      
-         
+      <% @users.each_with_index do |user,index| %>
+     
         <div class="col-md-4 users style='text-align:center'">
           <div class="span44 border">
             <a  href=' /users/<%=user.id %>'>
               <img class="image_users" style="float:left" src='<%=user.image_url(:user_image)%>'/>
               <spam class="content-heading"><h5 class="user_name"><%=user.first_name+' '+user.last_name %></h5></spam>
             <spam class="text-rigth style='clear:both'"><%= user.email%></spam></a><br>
+           <!-- Shows chat buttons only if user is log in and only for the ones that are not login -->
+            <% if current_user.present? && user.id!=current_user.id%>
+             <!-- The data-sid attribute will hold our current users' id while data-rip attribute will hold the recipient's id. -->
+         
+              <%#= link_to "Send Message", "#", class: "btn btn-success btn-xs start-conversation",
+                      "data-sid" => current_user.id, "data-rip" => user.id %>
+            <% end %>
             <!-- <spam class="text-rigth"><%= user.users_description%></spam><br> -->
             <% if current_user.present? and current_user.admin? %>
             <%= link_to 'Edit', edit_user_path(user) %> <span class="div">|</span>

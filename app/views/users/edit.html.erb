@@ -1,9 +1,71 @@
 <div class="form_new_user_margin">
-	<h4>Edit user:</h4>
+	<h4 class="edit-user-tag">Edit user:</h4>
 
-	<%= render 'form' %>
+	<%#= render 'form' %>
 
-	<spam><%= link_to 'Back', users_path%></spam>
+	
+<section class="user_form">
+<% if @user.errors.any? %>
+  <ul>
+    <% @user.errors.full_messages.each do |err| %>
+      <li><%= err %></li>
+    <% end %>
+  </ul>
+<% end %>
+<div class="user_edit_form">
+<%= form_for @user,html: { multipart: true } do |f| %>
+
+  <div class="field">
+    <%= f.label :first_name%><br />
+    <%= f.text_field :first_name, autofocus: true %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, autofocus: true %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off"%>
+  </div>
+  
+  <div class="field">
+    <%= f.label :image%><br>
+    <%= f.file_field :image, class: "" %>
+     <p class="message_container"></p>
+    <%= f.label :video%>
+ 	<%= f.file_field :video %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description, class: "user_titles" %><br/>
+    <%= f.text_area :users_description, autofocus: true,class: "text_area_user" %>
+  </div>
+ 
+  <button class="submit-new-user" type='submit'>Submit</button>
+   
+<% end %>
+</div>
+
+</section>
+
+
+
+
+	<spam class="back_edit_user"><%= link_to 'Back', users_path%></spam>
 </div>
 
 <footer class="footer-artist">
