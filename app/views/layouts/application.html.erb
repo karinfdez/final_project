@@ -12,7 +12,6 @@
 		<!-- Galleria was placed on app/assets/javascripts/galleria.js-->
 		<!--<script src="galleria/galleria-1.4.min.js"></script>  -->
 		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 		<%= csrf_meta_tags %>
 		<!-- Font used on the nav buttons -->
 		<link href='https://fonts.googleapis.com/css?family=BenchNine:400,300' rel='stylesheet' type='text/css'>
@@ -76,6 +75,8 @@
 					<!-- <div> -->
 					
 						<%= yield %>
+
+			<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
 					<!-- </div> -->
 		</div>
