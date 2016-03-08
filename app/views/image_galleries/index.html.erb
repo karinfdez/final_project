@@ -7,6 +7,7 @@
  
   <p class="image"><%= link_to 'Add new Image gallery' , new_image_gallery_path, id: "image-gal" %></p>
   <% end %>
+  <%if @image_galleries%>
       <% @image_galleries.each do |image_gallery| %>
         <div class="row">
           <a class="image_event" href="/image_galleries/<%=image_gallery.id%>"><p class="image_title"><%=image_gallery.title%>: <%=image_gallery.date%></p>
@@ -20,12 +21,13 @@
          </div>
         </div>
       <% end %>
-      
+      <% else %>
+      <p class="no-gallery">No images uploaded</p>
     </div>
 <!-- </section> -->
 <br>
   </div>  
- <footer class="footer-artist">
+ <footer class="footer-artist footer-gallery">
         <div class="container">
           <div class="asides clearfix">
             <aside class="logo">
