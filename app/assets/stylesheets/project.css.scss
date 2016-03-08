@@ -70,7 +70,7 @@ margin-bottom: 80px
 .posts_comments,.image,.user_description,
 .edit-link,.list-event,.add_event,.new_user,
 .log_in,.password,.edit_title,.back,.artist_video_tag,
-.edit-event-only
+.edit-event-only,.show-back-gallery
 
 {
 	font-family: 'Enriqueta', serif;
@@ -828,7 +828,7 @@ a.image_event:hover{
 }
 #image_gallery_picture{
 	position: relative;
-    left: -20px;
+    left: -480px;
 }
 .spam44 img{
 	// padding-bottom:55px;
@@ -1365,6 +1365,8 @@ p .inline{
 	width:100%;
 	// padding-top:11px;
 	min-height:100%;
+	margin-top: -20px;
+	height:100vh;
 }
 .footer_edit_gallery{
 	position:absolute;
@@ -1494,7 +1496,25 @@ p .inline{
 	color: #337ab7;
 }
 
-
+.edit-title{
+   padding-top: 190px;
+   color:white;
+   padding-left:35%;
+}
+.edit_image_gallery{
+	padding-left: 35%;
+}
+.label-picture{
+	position: relative;
+    top: 24px;
+    left: -15px;
+}
+.show-back-gallery{
+	padding-top: 40px;
+    padding-left: 45%;
+    font-size: 18px;
+    color: #337ab7;
+}
 
 footer{
 

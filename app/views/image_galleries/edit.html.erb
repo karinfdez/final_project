@@ -1,7 +1,7 @@
 <div class="background_edit_gallery">
 <!-- <div class="page-wrap"> -->
 
-<h1>Editing Image Gallery</h1>
+<h1 class="edit-title">Editing Image Gallery</h1>
 
 <%#= render 'form' %>
 <div class="edit-gallery">
@@ -20,13 +20,13 @@
 	  <% end %>
 
 	   <div class="field gal_form">
-	  <%= f.label :title %>
-	  <%= f.text_field :title%><br>
-	  <%= f.label :date %>
-	    <%= f.date_field :date %><br>
-	    <%= f.label :picture %>
+	  <%= f.label :title, class:"title-edit" %>
+	  <%= f.text_field :title, class: "title-input-edit"%><br>
+	  <%= f.label :date, class: "date-edit" %>
+	    <%= f.date_field :date, class: "date-input-edit" %><br>
+	    <%= f.label :picture, class:"label-picture"%>
 	    <div class="padding_uploader">
-	    <%= f.file_field :picture, multiple: true %><br>
+	    <%= f.file_field :picture, multiple: true,class:"picture-input-uploader" %><br>
 	  </div>
 	  
 	  <div class="actions button_gallery">
@@ -35,9 +35,10 @@
 	<% end %>
 	</div>
 
-
-<%= link_to 'Show', @image_gallery %> |
-<%= link_to 'Back', image_galleries_path %>
+<div class="show-back-gallery">
+	<%= link_to 'Show', @image_gallery %> <span class="blue-line">|</span>
+	<%= link_to 'Back', image_galleries_path %>
+</div>
 </div>
 <footer class="footer-artist footer_edit_gallery">
 				<div class="container">
