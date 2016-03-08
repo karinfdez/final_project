@@ -3,6 +3,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+*{
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;
+	margin: 0;
+}
 
 /*HOME PAGE */
 #container {
@@ -10,10 +16,7 @@
    height: 100%;
    margin-right:0;
 }
-   /*position:relative;*/
-* {
-  margin: 0;
-}
+  
 html, body {
   height: 100%;
 }
